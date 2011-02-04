@@ -138,23 +138,23 @@
 	NSString *bookNameKeyBase = bookNameKeys[style];
 	NSString *bookNameTable = bookNameTables[style];
 	NSString *bookNameKey = [bookNameKeyBase stringByAppendingFormat:@"%d", book];
-	return NSLocalizedStringFromTable(bookNameKey, bookNameTable, @"nameOfBookWithStyle");
+	NSString *bookName = NSLocalizedStringFromTable(bookNameKey, bookNameTable, @"nameOfBookWithStyle");
+	return bookName;
 }
 
 - (NSString *)stringForBookNameStyle:(BfoxBookNameStyle)bookNameStyle {
 	NSArray *refsByBooks = [self arrayOfRefsByBooks];
-	NSMutableString *string;
+	NSMutableString *refString = [NSMutableString string];
 	NSUInteger index = 0;
 	for (BfoxRef *ref in refsByBooks) {
-		if (index) [string appendString:@"; "];
-		[string appendString:[NSString stringWithFormat:
-							  @"%@ %@",
-							  [BfoxVerseList nameOfBook:[ref.verseList firstBook] withStyle:bookNameStyle],
-							  [ref.verseList numberStringForFirstBook]]];
+		if (index) [refString appendString:@"; "];
+		NSString *bookName = [BfoxVerseList nameOfBook:[ref.verseList firstBook] withStyle:bookNameStyle];
+		NSString *numberString = [ref.verseList numberStringForFirstBook];
+		[refString appendFormat:@"%@ %@", bookName, numberString];
 		index++;
 	}
 	
-	return string;
+	return refString;
 }
 
 - (BfoxBook)firstBook {
@@ -164,7 +164,9 @@
 
 - (NSString *)numberStringForFirstBook {
 	std::string number_str = verse_list->number_string_for_first_book("; ", "-", ":", ",", "-");
-	return [NSString stringWithCString:number_str.c_str() encoding:NSASCIIStringEncoding];
+	const char *c_str = number_str.c_str();
+	NSString *numString = [NSString stringWithCString:c_str encoding:NSASCIIStringEncoding];
+	return numString;
 }
 
 @end
