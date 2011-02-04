@@ -119,15 +119,15 @@ static inline BfoxVerseIndex BfoxVerseIndexForBCV(BfoxBook book, BfoxChapter cha
 }
 
 static inline BfoxBook BfoxBookForVerseIndex(BfoxVerseIndex verseIndex) {
-	return (BfoxBook) ((verseIndex >> 16) % BfoxBookMax);
+	return (BfoxBook) ((verseIndex >> 16) % 0x100);
 }
 
 static inline BfoxChapter BfoxChapterForVerseIndex(BfoxVerseIndex verseIndex) {
-	return (BfoxChapter) ((verseIndex >> 8) % BfoxChapterMax);
+	return (BfoxChapter) ((verseIndex >> 8) % 0x100);
 }
 
 static inline BfoxVerse BfoxVerseForVerseIndex(BfoxVerseIndex verseIndex) {
-	return (BfoxVerse) (verseIndex % BfoxVerseMax);
+	return (BfoxVerse) (verseIndex % 0x100);
 }
 
 #endif // BFOX_BIBLE_META_H_
