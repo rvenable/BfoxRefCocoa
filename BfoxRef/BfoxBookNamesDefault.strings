@@ -1,0 +1,139 @@
+/* 
+   BfoxBookNamesDefault.strings
+   BfoxRef
+
+   Created by Richard Venable on 2/3/11.
+   Copyright 2011 Epicfox. All rights reserved.
+ */
+
+"BfoxBookNameDefaultForBook1" = "Genesis";
+
+"BfoxBookNameDefaultForBook2" = "Exodus";
+
+"BfoxBookNameDefaultForBook3" = "Leviticus";
+
+"BfoxBookNameDefaultForBook4" = "Numbers";
+
+"BfoxBookNameDefaultForBook5" = "Deuteronomy";
+
+"BfoxBookNameDefaultForBook6" = "Joshua";
+
+"BfoxBookNameDefaultForBook7" = "Judges";
+
+"BfoxBookNameDefaultForBook8" = "Ruth";
+
+"BfoxBookNameDefaultForBook9" = "1 Samuel";
+
+"BfoxBookNameDefaultForBook10" = "2 Samuel";
+
+"BfoxBookNameDefaultForBook11" = "1 Kings";
+
+"BfoxBookNameDefaultForBook12" = "2 Kings";
+
+"BfoxBookNameDefaultForBook13" = "1 Chronicles";
+
+"BfoxBookNameDefaultForBook14" = "2 Chronicles";
+
+"BfoxBookNameDefaultForBook15" = "Ezra";
+
+"BfoxBookNameDefaultForBook16" = "Nehemiah";
+
+"BfoxBookNameDefaultForBook17" = "Esther";
+
+"BfoxBookNameDefaultForBook18" = "Job";
+
+"BfoxBookNameDefaultForBook19" = "Psalm";
+
+"BfoxBookNameDefaultForBook20" = "Proverbs";
+
+"BfoxBookNameDefaultForBook21" = "Ecclesiastes";
+
+"BfoxBookNameDefaultForBook22" = "Song of Solomon";
+
+"BfoxBookNameDefaultForBook23" = "Isaiah";
+
+"BfoxBookNameDefaultForBook24" = "Jeremiah";
+
+"BfoxBookNameDefaultForBook25" = "Lamentations";
+
+"BfoxBookNameDefaultForBook26" = "Ezekiel";
+
+"BfoxBookNameDefaultForBook27" = "Daniel";
+
+"BfoxBookNameDefaultForBook28" = "Hosea";
+
+"BfoxBookNameDefaultForBook29" = "Joel";
+
+"BfoxBookNameDefaultForBook30" = "Amos";
+
+"BfoxBookNameDefaultForBook31" = "Obadiah";
+
+"BfoxBookNameDefaultForBook32" = "Jonah";
+
+"BfoxBookNameDefaultForBook33" = "Micah";
+
+"BfoxBookNameDefaultForBook34" = "Nahum";
+
+"BfoxBookNameDefaultForBook35" = "Habakkuk";
+
+"BfoxBookNameDefaultForBook36" = "Zephaniah";
+
+"BfoxBookNameDefaultForBook37" = "Haggai";
+
+"BfoxBookNameDefaultForBook38" = "Zechariah";
+
+"BfoxBookNameDefaultForBook39" = "Malachi";
+
+"BfoxBookNameDefaultForBook40" = "Matthew";
+
+"BfoxBookNameDefaultForBook41" = "Mark";
+
+"BfoxBookNameDefaultForBook42" = "Luke";
+
+"BfoxBookNameDefaultForBook43" = "John";
+
+"BfoxBookNameDefaultForBook44" = "Acts";
+
+"BfoxBookNameDefaultForBook45" = "Romans";
+
+"BfoxBookNameDefaultForBook46" = "1 Corinthians";
+
+"BfoxBookNameDefaultForBook47" = "2 Corinthians";
+
+"BfoxBookNameDefaultForBook48" = "Galatians";
+
+"BfoxBookNameDefaultForBook49" = "Ephesians";
+
+"BfoxBookNameDefaultForBook50" = "Philippians";
+
+"BfoxBookNameDefaultForBook51" = "Colossians";
+
+"BfoxBookNameDefaultForBook52" = "1 Thessalonians";
+
+"BfoxBookNameDefaultForBook53" = "2 Thessalonians";
+
+"BfoxBookNameDefaultForBook54" = "1 Timothy";
+
+"BfoxBookNameDefaultForBook55" = "2 Timothy";
+
+"BfoxBookNameDefaultForBook56" = "Titus";
+
+"BfoxBookNameDefaultForBook57" = "Philemon";
+
+"BfoxBookNameDefaultForBook58" = "Hebrews";
+
+"BfoxBookNameDefaultForBook59" = "James";
+
+"BfoxBookNameDefaultForBook60" = "1 Peter";
+
+"BfoxBookNameDefaultForBook61" = "2 Peter";
+
+"BfoxBookNameDefaultForBook62" = "1 John";
+
+"BfoxBookNameDefaultForBook63" = "2 John";
+
+"BfoxBookNameDefaultForBook64" = "3 John";
+
+"BfoxBookNameDefaultForBook65" = "Jude";
+
+"BfoxBookNameDefaultForBook66" = "Revelation";

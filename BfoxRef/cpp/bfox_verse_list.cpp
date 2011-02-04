@@ -11,6 +11,51 @@
 #include "bfox_book_meta.h"
 #include <sstream>
 
+BfoxVerseIndex Bfox::VerseList::create_first_verse_index(BfoxBook book1, BfoxChapter chapter1, BfoxVerse verse1) {
+	/*
+	 * Maximize bible reference before we actually add them to the sequence list
+	 */
+	
+	// Adjust verse1 to be zero if it is one
+	if (BfoxFirstVerseInChapter == verse1)
+		verse1 = BfoxFirstVerseForFullChapter;
+	
+	// Adjust chapter1 to zero if this is the first verse of the first chapter
+	if ((BfoxFirstChapterInBook == chapter1) && (BfoxFirstVerseForFullChapter == verse1))
+		chapter1 = BfoxFirstChapterForFullBook;
+	
+	// If the start verse is greater than the last verse of the chapter, try to start with the next chapter
+	// So, 'Haggai 1:100-2:4' should become 'Haggai 2:1-4'
+	if (verse1 > BfoxLastVerseInChapter(book1, chapter1)) {
+		verse1 = BfoxFirstVerseForFullChapter;
+		if (BfoxChapterMax > chapter1) chapter1 = (BfoxChapter) (chapter1 + 1);
+	}
+	
+	// If the start chapter is greater than the last chapter of the book, this isn't a valid sequence
+	if (chapter1 > BfoxLastChapterInBook(book1)) {
+		return BfoxVerseIndexNotSet;
+	}
+	
+	return BfoxVerseIndexForBCV(book1, chapter1, verse1);
+}
+
+BfoxVerseIndex Bfox::VerseList::create_last_verse_index(BfoxBook book2, BfoxChapter chapter2, BfoxVerse verse2) {
+	/*
+	 * Maximize bible reference before we actually add them to the sequence list
+	 */
+	
+	// Adjust verse2 to be max_verse_id if it is greater than equal to the earliest possible end verse for chapter2,
+	// or if chapter2 is greater than the end chapter for this verse
+	if ((verse2 >= BfoxEarliestLastVerseInChapter(book2, chapter2)) || (chapter2 > BfoxLastChapterInBook(book2)))
+		verse2 = BfoxLastVerseForFullChapter;
+	
+	// Adjust chapter2 to be max_chapter_id if it is greater than or equal to the last chapter of this book
+	if ((BfoxLastVerseForFullChapter == verse2) && (chapter2 >= BfoxLastChapterInBook(book2)))
+		chapter2 = BfoxLastChapterForFullBook;
+	
+	return BfoxVerseIndexForBCV(book2, chapter2, verse2);
+}
+
 std::string Bfox::VerseList::number_string_for_first_book(const char *separate_chapters_str = "; ",
 												   const char *connect_chapters_str = "-",
 												   const char *connect_chapter_to_verse_str = ":",

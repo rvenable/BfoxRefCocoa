@@ -1,0 +1,139 @@
+/* 
+   BfoxBookNamesShort.strings
+   BfoxRef
+
+   Created by Richard Venable on 2/3/11.
+   Copyright 2011 Epicfox. All rights reserved.
+ */
+
+"BfoxBookNameShortForBook1" = "Gen";
+
+"BfoxBookNameShortForBook2" = "Exo";
+
+"BfoxBookNameShortForBook3" = "Lev";
+
+"BfoxBookNameShortForBook4" = "Num";
+
+"BfoxBookNameShortForBook5" = "Deut";
+
+"BfoxBookNameShortForBook6" = "Josh";
+
+"BfoxBookNameShortForBook7" = "Judg";
+
+"BfoxBookNameShortForBook8" = "Ruth";
+
+"BfoxBookNameShortForBook9" = "1Sam";
+
+"BfoxBookNameShortForBook10" = "2Sam";
+
+"BfoxBookNameShortForBook11" = "1Ki";
+
+"BfoxBookNameShortForBook12" = "2Ki";
+
+"BfoxBookNameShortForBook13" = "1Chr";
+
+"BfoxBookNameShortForBook14" = "2Chr";
+
+"BfoxBookNameShortForBook15" = "Ezra";
+
+"BfoxBookNameShortForBook16" = "Neh";
+
+"BfoxBookNameShortForBook17" = "Esth";
+
+"BfoxBookNameShortForBook18" = "Job";
+
+"BfoxBookNameShortForBook19" = "Ps";
+
+"BfoxBookNameShortForBook20" = "Prov";
+
+"BfoxBookNameShortForBook21" = "Ecc";
+
+"BfoxBookNameShortForBook22" = "Song";
+
+"BfoxBookNameShortForBook23" = "Isa";
+
+"BfoxBookNameShortForBook24" = "Jer";
+
+"BfoxBookNameShortForBook25" = "Lam";
+
+"BfoxBookNameShortForBook26" = "Ezek";
+
+"BfoxBookNameShortForBook27" = "Dan";
+
+"BfoxBookNameShortForBook28" = "Hos";
+
+"BfoxBookNameShortForBook29" = "Joel";
+
+"BfoxBookNameShortForBook30" = "Amos";
+
+"BfoxBookNameShortForBook31" = "Obad";
+
+"BfoxBookNameShortForBook32" = "Jnh";
+
+"BfoxBookNameShortForBook33" = "Mic";
+
+"BfoxBookNameShortForBook34" = "Nah";
+
+"BfoxBookNameShortForBook35" = "Hab";
+
+"BfoxBookNameShortForBook36" = "Zeph";
+
+"BfoxBookNameShortForBook37" = "Hag";
+
+"BfoxBookNameShortForBook38" = "Zech";
+
+"BfoxBookNameShortForBook39" = "Mal";
+
+"BfoxBookNameShortForBook40" = "Matt";
+
+"BfoxBookNameShortForBook41" = "Mark";
+
+"BfoxBookNameShortForBook42" = "Luke";
+
+"BfoxBookNameShortForBook43" = "John";
+
+"BfoxBookNameShortForBook44" = "Acts";
+
+"BfoxBookNameShortForBook45" = "Rom";
+
+"BfoxBookNameShortForBook46" = "1Cor";
+
+"BfoxBookNameShortForBook47" = "2Cor";
+
+"BfoxBookNameShortForBook48" = "Gal";
+
+"BfoxBookNameShortForBook49" = "Eph";
+
+"BfoxBookNameShortForBook50" = "Phil";
+
+"BfoxBookNameShortForBook51" = "Col";
+
+"BfoxBookNameShortForBook52" = "1Th";
+
+"BfoxBookNameShortForBook53" = "2Th";
+
+"BfoxBookNameShortForBook54" = "1Tim";
+
+"BfoxBookNameShortForBook55" = "2Tim";
+
+"BfoxBookNameShortForBook56" = "Tit";
+
+"BfoxBookNameShortForBook57" = "Phm";
+
+"BfoxBookNameShortForBook58" = "Heb";
+
+"BfoxBookNameShortForBook59" = "Jm";
+
+"BfoxBookNameShortForBook60" = "1Pet";
+
+"BfoxBookNameShortForBook61" = "2Pet";
+
+"BfoxBookNameShortForBook62" = "1Jn";
+
+"BfoxBookNameShortForBook63" = "2Jn";
+
+"BfoxBookNameShortForBook64" = "3Jn";
+
+"BfoxBookNameShortForBook65" = "Jude";
+
+"BfoxBookNameShortForBook66" = "Rev";

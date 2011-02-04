@@ -17,6 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
+	NSString *refString = @"Genesis 1";
+	BfoxRef *ref = [BfoxRef refWithString:refString];
+	NSLog(@"Ref check: '%@' => '%@'", refString, ref);
     
     [self.window makeKeyAndVisible];
     

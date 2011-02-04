@@ -28,6 +28,13 @@
 		790D42D812FA2B0F00A161D3 /* parser.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D212FA2B0F00A161D3 /* parser.php */; };
 		790D42D912FA2B0F00A161D3 /* sequences.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D312FA2B0F00A161D3 /* sequences.php */; };
 		790D42DA12FA2B0F00A161D3 /* verse.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D412FA2B0F00A161D3 /* verse.php */; };
+		790D42E712FA311700A161D3 /* BfoxRefParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 790D42E612FA311700A161D3 /* BfoxRefParser.mm */; };
+		790D42ED12FA34DC00A161D3 /* BfoxRefParseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 790D42EC12FA34DC00A161D3 /* BfoxRefParseResult.m */; };
+		790D42F212FAF47D00A161D3 /* NSString+BfoxRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 790D42F112FAF47D00A161D3 /* NSString+BfoxRef.m */; };
+		790D42F512FB3DE100A161D3 /* BfoxBookRegexes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 790D42F412FB3DE100A161D3 /* BfoxBookRegexes.strings */; };
+		793F818312FB474E0010B466 /* BfoxBookSynonymLookup.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793F818212FB474E0010B466 /* BfoxBookSynonymLookup.strings */; };
+		793F81A612FB5AF40010B466 /* BfoxBookNamesDefault.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793F81A512FB5AF40010B466 /* BfoxBookNamesDefault.strings */; };
+		793F81AA12FB5B9F0010B466 /* BfoxBookNamesShort.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793F81A912FB5B9F0010B466 /* BfoxBookNamesShort.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +69,17 @@
 		790D42D212FA2B0F00A161D3 /* parser.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = parser.php; sourceTree = "<group>"; };
 		790D42D312FA2B0F00A161D3 /* sequences.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = sequences.php; sourceTree = "<group>"; };
 		790D42D412FA2B0F00A161D3 /* verse.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = verse.php; sourceTree = "<group>"; };
+		790D42E512FA311700A161D3 /* BfoxRefParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefParser.h; sourceTree = "<group>"; };
+		790D42E612FA311700A161D3 /* BfoxRefParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BfoxRefParser.mm; sourceTree = "<group>"; };
+		790D42EB12FA34DC00A161D3 /* BfoxRefParseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefParseResult.h; sourceTree = "<group>"; };
+		790D42EC12FA34DC00A161D3 /* BfoxRefParseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BfoxRefParseResult.m; sourceTree = "<group>"; };
+		790D42F012FAF47D00A161D3 /* NSString+BfoxRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BfoxRef.h"; sourceTree = "<group>"; };
+		790D42F112FAF47D00A161D3 /* NSString+BfoxRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BfoxRef.m"; sourceTree = "<group>"; };
+		790D42F412FB3DE100A161D3 /* BfoxBookRegexes.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookRegexes.strings; sourceTree = "<group>"; };
+		793F818212FB474E0010B466 /* BfoxBookSynonymLookup.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookSynonymLookup.strings; sourceTree = "<group>"; };
+		793F81A212FB584A0010B466 /* bfox_bible_meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_bible_meta.h; sourceTree = "<group>"; };
+		793F81A512FB5AF40010B466 /* BfoxBookNamesDefault.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookNamesDefault.strings; sourceTree = "<group>"; };
+		793F81A912FB5B9F0010B466 /* BfoxBookNamesShort.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookNamesShort.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BfoxRef-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BfoxRef-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,11 +174,12 @@
 		790D42BE12FA2AC400A161D3 /* cpp */ = {
 			isa = PBXGroup;
 			children = (
+				793F81A212FB584A0010B466 /* bfox_bible_meta.h */,
 				790D42C712FA2AEA00A161D3 /* bfox_book_meta.h */,
-				790D42C812FA2AEA00A161D3 /* bfox_range_list.cpp */,
 				790D42C912FA2AEA00A161D3 /* bfox_range_list.h */,
-				790D42CA12FA2AEA00A161D3 /* bfox_verse_list.cpp */,
+				790D42C812FA2AEA00A161D3 /* bfox_range_list.cpp */,
 				790D42CB12FA2AEA00A161D3 /* bfox_verse_list.h */,
+				790D42CA12FA2AEA00A161D3 /* bfox_verse_list.cpp */,
 			);
 			path = cpp;
 			sourceTree = "<group>";
@@ -187,6 +206,16 @@
 				790D40E912F9C7F000A161D3 /* BfoxRef.mm */,
 				790D40F912F9CB1800A161D3 /* BfoxVerseList.h */,
 				790D40FA12F9CB1800A161D3 /* BfoxVerseList.mm */,
+				790D42E512FA311700A161D3 /* BfoxRefParser.h */,
+				790D42E612FA311700A161D3 /* BfoxRefParser.mm */,
+				790D42EB12FA34DC00A161D3 /* BfoxRefParseResult.h */,
+				790D42EC12FA34DC00A161D3 /* BfoxRefParseResult.m */,
+				790D42F012FAF47D00A161D3 /* NSString+BfoxRef.h */,
+				790D42F112FAF47D00A161D3 /* NSString+BfoxRef.m */,
+				790D42F412FB3DE100A161D3 /* BfoxBookRegexes.strings */,
+				793F818212FB474E0010B466 /* BfoxBookSynonymLookup.strings */,
+				793F81A512FB5AF40010B466 /* BfoxBookNamesDefault.strings */,
+				793F81A912FB5B9F0010B466 /* BfoxBookNamesShort.strings */,
 			);
 			path = BfoxRef;
 			sourceTree = "<group>";
@@ -251,6 +280,10 @@
 				790D42D812FA2B0F00A161D3 /* parser.php in Resources */,
 				790D42D912FA2B0F00A161D3 /* sequences.php in Resources */,
 				790D42DA12FA2B0F00A161D3 /* verse.php in Resources */,
+				790D42F512FB3DE100A161D3 /* BfoxBookRegexes.strings in Resources */,
+				793F818312FB474E0010B466 /* BfoxBookSynonymLookup.strings in Resources */,
+				793F81A612FB5AF40010B466 /* BfoxBookNamesDefault.strings in Resources */,
+				793F81AA12FB5B9F0010B466 /* BfoxBookNamesShort.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +303,9 @@
 				790D40FB12F9CB1800A161D3 /* BfoxVerseList.mm in Sources */,
 				790D42CC12FA2AEA00A161D3 /* bfox_range_list.cpp in Sources */,
 				790D42CD12FA2AEA00A161D3 /* bfox_verse_list.cpp in Sources */,
+				790D42E712FA311700A161D3 /* BfoxRefParser.mm in Sources */,
+				790D42ED12FA34DC00A161D3 /* BfoxRefParseResult.m in Sources */,
+				790D42F212FAF47D00A161D3 /* NSString+BfoxRef.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

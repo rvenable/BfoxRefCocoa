@@ -13,7 +13,7 @@
 
 - (id)init {
 	if (self = [super init]) {
-		verse_list = NULL;
+		verse_list = new Bfox::VerseList();
 	}
 	return self;
 }
@@ -42,6 +42,46 @@
 	verse_list->add_range_list(range_list, false);
 }
 
+#pragma mark -
+#pragma mark Add verses manually (mainly used by BfoxRefParser)
+
+- (void)addVersesForFullBook:(BfoxBook)book {
+	[self addVersesFromChapter:BfoxFirstChapterForFullBook
+						 verse:BfoxFirstVerseForFullChapter
+					 toChapter:BfoxLastChapterForFullBook
+						 verse:BfoxLastVerseForFullChapter
+					withinBook:book];
+}
+
+- (void)addVersesFromVerse:(BfoxVerse)verse1 toVerse:(BfoxVerse)verse2 withinChapter:(BfoxChapter)chapter ofBook:(BfoxBook)book {
+	if (BfoxVerseNotSet == verse2) verse2 = verse1;
+	[self addVersesFromChapter:chapter
+						 verse:verse1
+					 toChapter:chapter
+						 verse:verse2
+					withinBook:book];
+}
+
+- (void)addVersesFromChapter:(BfoxChapter)chapter1 verse:(BfoxVerse)verse1 toChapter:(BfoxChapter)chapter2 verse:(BfoxVerse)verse2 withinBook:(BfoxBook)book {
+	[self addVerseRangeForBook:book
+				   fromChapter:chapter1
+						 verse:verse1
+					 toChapter:chapter2
+						 verse:verse2];
+}
+
+- (void)addVerseRangeForBook:(BfoxBook)book fromChapter:(BfoxChapter)chapter1 verse:(BfoxVerse)verse1 toChapter:(BfoxChapter)chapter2 verse:(BfoxVerse)verse2 {
+	Bfox::Range range;
+	range.first = verse_list->create_first_verse_index(book, chapter1, verse1);
+	range.last = verse_list->create_last_verse_index(book, chapter2, verse2);
+	
+	verse_list->add_range(range, false);
+}
+
+- (Boolean)hasVerses {
+	return !verse_list->empty();
+}
+
 - (NSMutableArray *)arrayOfRefsCutAtRangeBorder:(BfoxVerseIndex)rangeBorder withOffset:(NSUInteger)offset {
 	std::list<Bfox::RangeList *> list_of_verse_lists = verse_list->cut_at_range_borders(rangeBorder, offset);
 	
@@ -61,6 +101,60 @@
 	}
 	
 	return array;
+}
+
+- (NSMutableArray *)arrayOfRefsByBooks {
+	return [self arrayOfRefsCutAtRangeBorder:BfoxVerseIndexForBCV(BfoxFirstBookInBible, BfoxChapterNotSet, BfoxVerseNotSet) withOffset:0];
+}
+
+- (NSMutableArray *)arrayOfRefsByChapter {
+	return [self arrayOfRefsCutAtRangeBorder:BfoxVerseIndexForBCV(BfoxBookNotSet, BfoxFirstChapterInBook, BfoxVerseNotSet) withOffset:0];
+}
+
+- (NSMutableArray *)arrayOfRefsWithChapterSize:(NSUInteger)chapterSize {
+	NSArray *refsByChapter = [self arrayOfRefsByChapter];
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:ceil([refsByChapter count] / (double) chapterSize)];
+	BfoxRef *currentRef = [BfoxRef ref];
+	NSUInteger counter = 0;
+	for (BfoxRef *ref in refsByChapter) {
+		[currentRef addRef:ref];
+		counter++;
+		if (counter == chapterSize) {
+			counter = 0;
+			[array addObject:currentRef];
+			currentRef = [BfoxRef ref];
+		}
+	}
+	if (counter) {
+		[array addObject:currentRef];
+	}
+	
+	return [NSArray arrayWithArray:array];
+}
+
++ (NSString *)nameOfBook:(BfoxBook)book withStyle:(BfoxBookNameStyle)style {
+	static NSString *bookNameKeys[BfoxBookNameStyleCount] = {@"BfoxBookNameDefaultForBook", @"BfoxBookNameShortForBook"};
+	static NSString *bookNameTables[BfoxBookNameStyleCount] = {@"BfoxBookNamesDefault", @"BfoxBookNamesShort"};
+	NSString *bookNameKeyBase = bookNameKeys[style];
+	NSString *bookNameTable = bookNameTables[style];
+	NSString *bookNameKey = [bookNameKeyBase stringByAppendingFormat:@"%d", book];
+	return NSLocalizedStringFromTable(bookNameKey, bookNameTable, @"nameOfBookWithStyle");
+}
+
+- (NSString *)stringForBookNameStyle:(BfoxBookNameStyle)bookNameStyle {
+	NSArray *refsByBooks = [self arrayOfRefsByBooks];
+	NSMutableString *string;
+	NSUInteger index = 0;
+	for (BfoxRef *ref in refsByBooks) {
+		if (index) [string appendString:@"; "];
+		[string appendString:[NSString stringWithFormat:
+							  @"%@ %@",
+							  [BfoxVerseList nameOfBook:[ref.verseList firstBook] withStyle:bookNameStyle],
+							  [ref.verseList numberStringForFirstBook]]];
+		index++;
+	}
+	
+	return string;
 }
 
 - (BfoxBook)firstBook {

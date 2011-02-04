@@ -11,7 +11,6 @@
 #import "BfoxRef.h"
 
 @interface AppDelegate_iPhone : AppDelegate_Shared {
-	BfoxRef *ref;
 }
 
 

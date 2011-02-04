@@ -7,12 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "bfox_book_meta.h"
-
-typedef enum {
-	BfoxBookNameStyleDefault,
-	BfoxBookNameStyleShort,
-} BfoxBookNameStyle;
 
 @class BfoxVerseList;
 
@@ -23,14 +17,13 @@ typedef enum {
 @property (nonatomic, retain) BfoxVerseList *verseList;
 
 + (BfoxRef *)ref;
++ (BfoxRef *)refWithString:(NSString *)refString;
 + (BfoxRef *)refWithRef:(BfoxRef *)ref;
 + (BfoxRef *)refWithVerseList:(BfoxVerseList *)newVerseList;
-- (void)addRef:(BfoxRef *)ref;
-- (NSMutableArray *)arrayOfRefsByBooks;
-- (NSMutableArray *)arrayOfRefsByChapter;
-- (NSMutableArray *)arrayOfRefsWithChapterSize:(NSUInteger)chapterSize;
-+ (NSString *)nameOfBook:(BfoxBook)book withStyle:(BfoxBookNameStyle)style;
-- (NSString *)stringForBookNameStyle:(BfoxBookNameStyle)bookNameStyle;
 
+- (void)addString:(NSString *)refString;
+- (void)addRef:(BfoxRef *)ref;
+
+- (Boolean)hasVerses;
 
 @end

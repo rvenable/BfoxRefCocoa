@@ -12,8 +12,8 @@
 bool Bfox::RangeList::add_range(Bfox::Range new_range, bool test_only = false) {
 	bool is_modified = false;
 	bool is_finished = false;
-	
-	std::list<Bfox::Range> new_ranges;
+
+	Bfox::RangeList new_ranges;
 	
 	for (Bfox::RangeList::iterator it = this->begin(); it != this->end(); it++) {
 		Bfox::Range range = *it;

@@ -183,7 +183,7 @@ class BibleMeta {
 	 *
 	 * @var array of array of integer
 	 */
-	private static $min_verse_counts = array(
+	public static $min_verse_counts = array(
 	1 => array(50, 31, 25, 24, 26, 32, 22, 24, 22, 29, 32, 32, 20, 18, 24, 21, 16, 27, 33, 38, 18, 34, 24, 20, 67, 34, 35, 46, 22, 35, 43, 55, 32, 20, 31, 29, 43, 36, 30, 23, 23, 57, 38, 34, 34, 28, 34, 31, 22, 33, 26),
 	2 => array(40, 22, 25, 22, 31, 23, 30, 25, 32, 35, 29, 10, 51, 22, 31, 27, 36, 16, 27, 25, 26, 36, 31, 33, 18, 40, 37, 21, 43, 46, 38, 18, 35, 23, 35, 35, 38, 29, 31, 43, 38),
 	3 => array(27, 17, 16, 17, 35, 19, 30, 38, 36, 24, 20, 47, 8, 59, 57, 33, 34, 16, 30, 37, 27, 24, 33, 44, 23, 55, 46, 34),
@@ -271,7 +271,7 @@ class BibleMeta {
 	 *
 	 * @var array of array of integer
 	 */
-	private static $max_verse_counts = array (
+	public static $max_verse_counts = array (
 	45 => array(14 => 26, 16 => 27),
 	66 => array(22 => 21),
 	69 => array(1 => 11, 2 => 6, 3 => 22, 4 => 23, 5 => 13, 6 => 9, 7 => 30),
