@@ -13,7 +13,8 @@ bool Bfox::RangeList::add_range(Bfox::Range new_range, bool test_only = false) {
 	bool is_modified = false;
 	bool is_finished = false;
 
-	Bfox::RangeList new_ranges;
+	// TODO: optimize to not use a separate RangeList (because it just gets copied later)
+	Bfox::RangeList *new_ranges = this->new_list();
 	
 	for (Bfox::RangeList::iterator it = this->begin(); it != this->end(); it++) {
 		Bfox::Range range = *it;
@@ -24,8 +25,8 @@ bool Bfox::RangeList::add_range(Bfox::Range new_range, bool test_only = false) {
 				// If the new range also ends before, then we've found the spot to place it
 				// Otherwise, it intersects, so modify the new range to include range
 				if ((new_range.last + 1) < range.first) {
-					new_ranges.insert(new_ranges.end(), new_range);
-					new_ranges.insert(new_ranges.end(), range);
+					new_ranges->insert(new_ranges->end(), new_range);
+					new_ranges->insert(new_ranges->end(), range);
 					is_finished = true;
 					is_modified = true;
 				}
@@ -45,25 +46,28 @@ bool Bfox::RangeList::add_range(Bfox::Range new_range, bool test_only = false) {
 					new_range.first = range.first;
 					if (new_range.last <= range.last) {
 						// The new range is within an existing range, so set the existing one and get rid of the new one
-						new_ranges.insert(new_ranges.end(), range);
+						new_ranges->insert(new_ranges->end(), range);
 						is_finished = true;
 					}
 				}
 				else {
-					new_ranges.insert(new_ranges.end(), range);
+					new_ranges->insert(new_ranges->end(), range);
 				}
 			}
 		}
 		else {
-			new_ranges.insert(new_ranges.end(), range);
+			new_ranges->insert(new_ranges->end(), range);
 		}
 	}
 	if (!is_finished) {
-		new_ranges.insert(new_ranges.end(), new_range);
+		new_ranges->insert(new_ranges->end(), new_range);
 		is_modified = true;
 	}
 
-	if (is_modified && !test_only) this->assign(new_ranges.begin(), new_ranges.end());
+	if (is_modified && !test_only) this->assign(new_ranges->begin(), new_ranges->end());
+
+	delete new_ranges;
+	
 	return is_modified;
 }
 
@@ -79,7 +83,7 @@ bool Bfox::RangeList::add_range_list(Bfox::RangeList *new_range_list, bool test_
 
 std::list<Bfox::RangeList *> Bfox::RangeList::cut_at_range_borders(unsigned int range_size, unsigned int range_offset = 0) {
 	std::list<Bfox::RangeList *> list_of_lists;
-	Bfox::RangeList *current_list;
+	Bfox::RangeList *current_list = this->new_list();
 	unsigned int next_range_first = 0;
 
 	// Iterate through each range and see where it belongs in the new list of lists
@@ -116,7 +120,11 @@ std::list<Bfox::RangeList *> Bfox::RangeList::cut_at_range_borders(unsigned int 
 	// If we still have a Bfox::RangeList to insert, do it
 	if (!current_list->empty()) {
 		list_of_lists.insert(list_of_lists.end(), current_list);
+		current_list = 0;
 	}
+
+	if (current_list)
+		delete current_list;
 	
 	return list_of_lists;
 }
