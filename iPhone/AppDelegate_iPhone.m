@@ -20,6 +20,10 @@
 	NSString *refString = @"Genesis 1";
 	BfoxRef *ref = [BfoxRef refWithString:refString];
 	NSLog(@"Ref check: '%@' => '%@'", refString, ref);
+	
+	ref = [BfoxRef ref];
+	[ref addEntireBible];
+	NSLog(@"%@", [ref shortRefString]);
     
     [self.window makeKeyAndVisible];
     

@@ -24,6 +24,7 @@ typedef enum {
 - (Bfox::VerseList *)verse_list;
 - (void)set_verse_list:(Bfox::VerseList *)new_verse_list;
 - (void)addVerseList:(BfoxVerseList *)verseList;
+- (void)addVersesFromBook:(BfoxBook)book1 toBook:(BfoxBook)book2;
 - (void)addVersesForFullBook:(BfoxBook)book;
 - (void)addVersesFromVerse:(BfoxVerse)verse1 toVerse:(BfoxVerse)verse2 withinChapter:(BfoxChapter)chapter ofBook:(BfoxBook)book;
 - (void)addVersesFromChapter:(BfoxChapter)chapter1 verse:(BfoxVerse)verse1 toChapter:(BfoxChapter)chapter2 verse:(BfoxVerse)verse2 withinBook:(BfoxBook)book;

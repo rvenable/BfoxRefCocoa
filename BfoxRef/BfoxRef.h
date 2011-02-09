@@ -23,7 +23,13 @@
 
 - (void)addString:(NSString *)refString;
 - (void)addRef:(BfoxRef *)ref;
+- (void)addEntireBible;
+- (void)addOldTestament;
+- (void)addNewTestament;
 
 - (Boolean)hasVerses;
+
+- (NSString *)refString;
+- (NSString *)shortRefString;
 
 @end

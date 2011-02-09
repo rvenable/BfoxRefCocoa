@@ -61,12 +61,32 @@
 	[verseList addVerseList:ref.verseList];
 }
 
+- (void)addEntireBible {
+	[verseList addVersesFromBook:BfoxBookGenesis toBook:BfoxBookRevelation];
+}
+
+- (void)addOldTestament {
+	[verseList addVersesFromBook:BfoxBookGenesis toBook:BfoxBookMalachi];
+}
+
+- (void)addNewTestament {
+	[verseList addVersesFromBook:BfoxBookMatthew toBook:BfoxBookRevelation];
+}
+
 - (Boolean)hasVerses {
 	return [verseList hasVerses];
 }
 
 - (NSString *)description {
+	return [self refString];
+}
+
+- (NSString *)refString {
 	return [verseList stringForBookNameStyle:BfoxBookNameStyleDefault];
+}
+
+- (NSString *)shortRefString {
+	return [verseList stringForBookNameStyle:BfoxBookNameStyleShort];
 }
 
 @end

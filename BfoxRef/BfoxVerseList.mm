@@ -45,6 +45,14 @@
 #pragma mark -
 #pragma mark Add verses manually (mainly used by BfoxRefParser)
 
+- (void)addVersesFromBook:(BfoxBook)book1 toBook:(BfoxBook)book2 {
+	Bfox::Range range;
+	range.first = verse_list->create_first_verse_index(book1, BfoxFirstChapterForFullBook, BfoxFirstVerseForFullChapter);
+	range.last = verse_list->create_last_verse_index(book2, BfoxLastChapterForFullBook, BfoxLastVerseForFullChapter);
+	
+	verse_list->add_range(range, false);
+}
+
 - (void)addVersesForFullBook:(BfoxBook)book {
 	[self addVersesFromChapter:BfoxFirstChapterForFullBook
 						 verse:BfoxFirstVerseForFullChapter
