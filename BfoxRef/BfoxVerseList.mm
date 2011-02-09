@@ -158,7 +158,10 @@
 		if (index) [refString appendString:@"; "];
 		NSString *bookName = [BfoxVerseList nameOfBook:[ref.verseList firstBook] withStyle:bookNameStyle];
 		NSString *numberString = [ref.verseList numberStringForFirstBook];
-		[refString appendFormat:@"%@ %@", bookName, numberString];
+
+		if (numberString && [numberString length]) [refString appendFormat:@"%@ %@", bookName, numberString];
+		else [refString appendString:bookName];
+		
 		index++;
 	}
 	
