@@ -12,7 +12,8 @@
 @implementation BfoxVerseList
 
 - (id)init {
-	if (self = [super init]) {
+	self = [super init];
+	if (self) {
 		verse_list = new Bfox::VerseList();
 	}
 	return self;

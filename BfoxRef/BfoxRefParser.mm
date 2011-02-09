@@ -25,7 +25,8 @@ NSString *const BfoxBookRegexReverseLevel3 = @"BfoxBookRegexReverseLevel3";
 @synthesize maxSynonymLevel, parseForward, allowWholeBooks, requireSpaceBeforeChapterVerse;
 
 - (id)init {
-	if (self = [super init]) {
+	self = [super init];
+	if (self) {
 		maxSynonymLevel = BfoxBookSynonymLevelStrictest;
 		parseForward = NO;
 		allowWholeBooks = YES;
