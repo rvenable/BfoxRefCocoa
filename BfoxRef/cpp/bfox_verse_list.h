@@ -18,6 +18,10 @@ namespace Bfox {
 	class VerseList : public RangeList {
 	public:
 		virtual RangeList *new_list() { return new VerseList(); };
+		virtual bool add_range(Range range, bool test_only);
+		bool add_verse_range(BfoxBook book1, BfoxChapter chapter1, BfoxVerse verse1,
+							 BfoxBook book2, BfoxChapter chapter2, BfoxVerse verse2,
+							 bool test_only);
 		BfoxVerseIndex create_first_verse_index(BfoxBook book1, BfoxChapter chapter1, BfoxVerse verse1);
 		BfoxVerseIndex create_last_verse_index(BfoxBook book2, BfoxChapter chapter2, BfoxVerse verse2);
 		std::string number_string_for_first_book(const char *separate_chapters_str,

@@ -11,6 +11,24 @@
 #include "bfox_book_meta.h"
 #include <sstream>
 
+bool Bfox::VerseList::add_range(Bfox::Range range, bool test_only = false) {
+	return this->add_verse_range(BfoxBookForVerseIndex(range.first), BfoxChapterForVerseIndex(range.first), BfoxVerseForVerseIndex(range.first),
+								 BfoxBookForVerseIndex(range.last), BfoxChapterForVerseIndex(range.last), BfoxVerseForVerseIndex(range.last),
+								 test_only);
+}
+
+bool Bfox::VerseList::add_verse_range(BfoxBook book1, BfoxChapter chapter1, BfoxVerse verse1,
+									  BfoxBook book2, BfoxChapter chapter2, BfoxVerse verse2,
+									  bool test_only = false) {
+	Bfox::Range range;
+	range.first = this->create_first_verse_index(book1, chapter1, verse1);
+	range.last = this->create_last_verse_index(book2, chapter2, verse2);
+
+	if (range.first == BfoxVerseIndexNotSet || range.last == BfoxVerseIndexNotSet) return false;
+	
+	return Bfox::RangeList::add_range(range, test_only);
+}
+
 BfoxVerseIndex Bfox::VerseList::create_first_verse_index(BfoxBook book1, BfoxChapter chapter1, BfoxVerse verse1) {
 	/*
 	 * Maximize bible reference before we actually add them to the sequence list
@@ -32,7 +50,7 @@ BfoxVerseIndex Bfox::VerseList::create_first_verse_index(BfoxBook book1, BfoxCha
 	}
 	
 	// If the start chapter is greater than the last chapter of the book, this isn't a valid sequence
-	if (chapter1 > BfoxLastChapterInBook(book1)) {
+	if (BfoxLastBookInBible < book1 || BfoxLastChapterInBook(book1) < chapter1 || BfoxLastVerseInChapter(book1, chapter1) < verse1) {
 		return BfoxVerseIndexNotSet;
 	}
 	
@@ -52,6 +70,11 @@ BfoxVerseIndex Bfox::VerseList::create_last_verse_index(BfoxBook book2, BfoxChap
 	// Adjust chapter2 to be max_chapter_id if it is greater than or equal to the last chapter of this book
 	if ((BfoxLastVerseForFullChapter == verse2) && (chapter2 >= BfoxLastChapterInBook(book2)))
 		chapter2 = BfoxLastChapterForFullBook;
+	
+	// If the start chapter is greater than the last chapter of the book, this isn't a valid sequence
+	if (BfoxFirstBookInBible > book2 || BfoxFirstChapterInBook > chapter2 || BfoxFirstVerseInChapter > verse2) {
+		return BfoxVerseIndexNotSet;
+	}
 	
 	return BfoxVerseIndexForBCV(book2, chapter2, verse2);
 }
