@@ -15,7 +15,7 @@
 #include <string>
 
 namespace Bfox {
-	struct VerseList : public RangeList {
+	class VerseList : public RangeList {
 	public:
 		virtual RangeList *new_list() { return new VerseList(); };
 		BfoxVerseIndex create_first_verse_index(BfoxBook book1, BfoxChapter chapter1, BfoxVerse verse1);

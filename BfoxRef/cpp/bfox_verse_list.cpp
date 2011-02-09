@@ -64,7 +64,7 @@ std::string Bfox::VerseList::number_string_for_first_book(const char *separate_c
 	BfoxBook book = BfoxBookNotSet;
 	BfoxChapter prev_ch = BfoxChapterNotSet;
 	std::stringstream str;
-	for (std::list<Bfox::Range>::iterator it = this->begin(); it != this->end(); it++) {
+	for (std::list<Bfox::Range>::iterator it = this->ranges.begin(); it != this->ranges.end(); it++) {
 		Bfox::Range range = *it;
 
 		// Keep track of the book, so that if we reach a range that is in a different book, we can break

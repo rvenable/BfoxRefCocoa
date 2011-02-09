@@ -119,7 +119,7 @@
 }
 
 - (BfoxBook)firstBook {
-	Bfox::Range front_range = verse_list->front();
+	Bfox::Range front_range = verse_list->ranges.front();
 	return BfoxBookForVerseIndex(front_range.first);
 }
 

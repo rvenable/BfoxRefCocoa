@@ -18,9 +18,12 @@ namespace Bfox {
 		unsigned int last;
 	};
 	
-	struct RangeList : public std::list<Range> {	
+	class RangeList {	
+	protected:
 	public:
+		std::list<Range> ranges;
 		virtual RangeList *new_list() { return new RangeList(); };
+		bool empty() { return ranges.empty(); };
 		bool add_range(Range range, bool test_only);
 		bool add_range_list(RangeList *new_range_list, bool test_only);
 		std::list<RangeList *> cut_at_range_borders(unsigned int range_size, unsigned int range_offset);
