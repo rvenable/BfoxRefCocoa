@@ -10,6 +10,12 @@
 
 @class BfoxVerseList;
 
+typedef enum {
+	BfoxBookNameStyleDefault,
+	BfoxBookNameStyleShort,
+	BfoxBookNameStyleCount
+} BfoxBookNameStyle;
+
 @interface BfoxRef : NSObject {
 	BfoxVerseList *verseList;
 }
@@ -31,5 +37,10 @@
 
 - (NSString *)refString;
 - (NSString *)shortRefString;
+- (NSString *)stringForBookNameStyle:(BfoxBookNameStyle)bookNameStyle;
+
+- (NSMutableArray *)arrayOfRefsByBooks;
+- (NSMutableArray *)arrayOfRefsByChapter;
+- (NSMutableArray *)arrayOfRefsWithChapterSize:(NSUInteger)chapterSize;
 
 @end

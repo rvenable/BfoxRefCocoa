@@ -10,12 +10,6 @@
 #import "bfox_verse_list.h"
 #import "bfox_bible_meta.h"
 
-typedef enum {
-	BfoxBookNameStyleDefault,
-	BfoxBookNameStyleShort,
-	BfoxBookNameStyleCount
-} BfoxBookNameStyle;
-
 @interface BfoxVerseList : NSObject {
 	Bfox::VerseList *verse_list;
 }
@@ -31,11 +25,7 @@ typedef enum {
 - (void)addVerseRangeForBook:(BfoxBook)book fromChapter:(BfoxChapter)chapter1 verse:(BfoxVerse)verse1 toChapter:(BfoxChapter)chapter2 verse:(BfoxVerse)verse2;
 - (Boolean)hasVerses;
 - (NSMutableArray *)arrayOfRefsCutAtRangeBorder:(BfoxVerseIndex)rangeBorder withOffset:(NSUInteger)offset;
-- (NSMutableArray *)arrayOfRefsByBooks;
-- (NSMutableArray *)arrayOfRefsByChapter;
-- (NSMutableArray *)arrayOfRefsWithChapterSize:(NSUInteger)chapterSize;
-+ (NSString *)nameOfBook:(BfoxBook)book withStyle:(BfoxBookNameStyle)style;
-- (NSString *)stringForBookNameStyle:(BfoxBookNameStyle)bookNameStyle;
++ (NSString *)nameOfBook:(BfoxBook)book forBookNameKeyBase:(NSString *)bookNameKeyBase inTable:(NSString *)bookNameTable;
 - (BfoxBook)firstBook;
 - (NSString *)numberStringForFirstBook;
 

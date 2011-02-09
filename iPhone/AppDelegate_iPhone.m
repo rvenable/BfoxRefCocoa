@@ -21,9 +21,16 @@
 	BfoxRef *ref = [BfoxRef refWithString:refString];
 	NSLog(@"Ref check: '%@' => '%@'", refString, ref);
 	
+	// Create a ref with the entire bible
 	ref = [BfoxRef ref];
 	[ref addEntireBible];
 	NSLog(@"%@", [ref shortRefString]);
+	
+	// Create an array of refs of each book in the bible
+	NSArray *books = [ref arrayOfRefsByBooks];
+	for (BfoxRef *book in books) {
+		NSLog(@"%@", book);
+	}
     
     [self.window makeKeyAndVisible];
     

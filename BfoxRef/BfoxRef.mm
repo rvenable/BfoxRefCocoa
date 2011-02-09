@@ -82,11 +82,63 @@
 }
 
 - (NSString *)refString {
-	return [verseList stringForBookNameStyle:BfoxBookNameStyleDefault];
+	return [self stringForBookNameStyle:BfoxBookNameStyleDefault];
 }
 
 - (NSString *)shortRefString {
-	return [verseList stringForBookNameStyle:BfoxBookNameStyleShort];
+	return [self stringForBookNameStyle:BfoxBookNameStyleShort];
+}
+
+- (NSString *)stringForBookNameStyle:(BfoxBookNameStyle)bookNameStyle {
+	static NSString *bookNameKeys[BfoxBookNameStyleCount] = {@"BfoxBookNameDefaultForBook", @"BfoxBookNameShortForBook"};
+	static NSString *bookNameTables[BfoxBookNameStyleCount] = {@"BfoxBookNamesDefault", @"BfoxBookNamesShort"};
+	NSString *bookNameKeyBase = bookNameKeys[bookNameStyle];
+	NSString *bookNameTable = bookNameTables[bookNameStyle];
+
+	NSArray *refsByBooks = [self arrayOfRefsByBooks];
+	NSMutableString *refString = [NSMutableString string];
+	NSUInteger index = 0;
+	for (BfoxRef *ref in refsByBooks) {
+		if (index) [refString appendString:@"; "];
+		NSString *bookName = [BfoxVerseList nameOfBook:[ref.verseList firstBook] forBookNameKeyBase:bookNameKeyBase inTable:bookNameTable];
+		NSString *numberString = [ref.verseList numberStringForFirstBook];
+		
+		if (numberString && [numberString length]) [refString appendFormat:@"%@ %@", bookName, numberString];
+		else [refString appendString:bookName];
+		
+		index++;
+	}
+	
+	return refString;
+}
+
+- (NSMutableArray *)arrayOfRefsByBooks {
+	return [verseList arrayOfRefsCutAtRangeBorder:BfoxVerseIndexForBCV(BfoxFirstBookInBible, BfoxChapterNotSet, BfoxVerseNotSet) withOffset:0];
+}
+
+- (NSMutableArray *)arrayOfRefsByChapter {
+	return [verseList arrayOfRefsCutAtRangeBorder:BfoxVerseIndexForBCV(BfoxBookNotSet, BfoxFirstChapterInBook, BfoxVerseNotSet) withOffset:0];
+}
+
+- (NSMutableArray *)arrayOfRefsWithChapterSize:(NSUInteger)chapterSize {
+	NSArray *refsByChapter = [self arrayOfRefsByChapter];
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:ceil([refsByChapter count] / (double) chapterSize)];
+	BfoxRef *currentRef = [BfoxRef ref];
+	NSUInteger counter = 0;
+	for (BfoxRef *ref in refsByChapter) {
+		[currentRef addRef:ref];
+		counter++;
+		if (counter == chapterSize) {
+			counter = 0;
+			[array addObject:currentRef];
+			currentRef = [BfoxRef ref];
+		}
+	}
+	if (counter) {
+		[array addObject:currentRef];
+	}
+	
+	return [NSArray arrayWithArray:array];
 }
 
 @end
