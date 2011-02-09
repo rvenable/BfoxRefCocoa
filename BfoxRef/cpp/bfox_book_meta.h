@@ -151,14 +151,14 @@ const unsigned int *BfoxBookChapterMaxVerseCounts[] = { BfoxBookGenesisMaxVerseC
 
 static inline BfoxBCV BfoxPassageEnd(BfoxBook book, BfoxChapter chapter, bool is_earliest) {
 	if (BfoxBookNotSet == book) return BfoxBookCount;
-	if (book < BfoxBookCount) {
-		unsigned int chapter_count = BfoxBookChapterCounts[book];
+	if ((book - 1) < BfoxBookCount) {
+		unsigned int chapter_count = BfoxBookChapterCounts[book - 1];
 		if (BfoxChapterNotSet == chapter) return (BfoxChapter) chapter_count;
 
 		if (chapter < chapter_count) {
 			const unsigned int *chapter_verse_counts;
-			if (is_earliest) chapter_verse_counts = BfoxBookChapterMinVerseCounts[book];
-			else chapter_verse_counts = BfoxBookChapterMaxVerseCounts[book];
+			if (is_earliest) chapter_verse_counts = BfoxBookChapterMinVerseCounts[book - 1];
+			else chapter_verse_counts = BfoxBookChapterMaxVerseCounts[book - 1];
 
 			return (BfoxVerse) chapter_verse_counts[chapter];
 		}
