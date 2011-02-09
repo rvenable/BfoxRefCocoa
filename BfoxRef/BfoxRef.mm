@@ -79,14 +79,14 @@
 }
 
 - (NSString *)description {
-	return [self refString];
+	return [self string];
 }
 
-- (NSString *)refString {
+- (NSString *)string {
 	return [self stringForBookNameStyle:BfoxBookNameStyleDefault];
 }
 
-- (NSString *)shortRefString {
+- (NSString *)shortString {
 	return [self stringForBookNameStyle:BfoxBookNameStyleShort];
 }
 

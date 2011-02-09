@@ -24,7 +24,7 @@
 	// Create a ref with the entire bible
 	ref = [BfoxRef ref];
 	[ref addEntireBible];
-	NSLog(@"%@", [ref shortRefString]);
+	NSLog(@"%@", [ref shortString]);
 	
 	// Create an array of refs of each book in the bible
 	NSArray *books = [ref arrayOfRefsByBooks];

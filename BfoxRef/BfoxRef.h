@@ -35,8 +35,8 @@ typedef enum {
 
 - (Boolean)hasVerses;
 
-- (NSString *)refString;
-- (NSString *)shortRefString;
+- (NSString *)string;
+- (NSString *)shortString;
 - (NSString *)stringForBookNameStyle:(BfoxBookNameStyle)bookNameStyle;
 
 - (NSMutableArray *)arrayOfRefsByBooks;
