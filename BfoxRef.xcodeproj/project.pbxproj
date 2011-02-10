@@ -3,233 +3,303 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* AppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate_iPad.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		2819307D112F81BE00ECF9B4 /* BfoxRef.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2819307C112F81BE00ECF9B4 /* BfoxRef.xcdatamodeld */; };
-		2860E38A111B897F00E27156 /* AppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E388111B897F00E27156 /* AppDelegate_iPhone.m */; };
-		2860E38B111B897F00E27156 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E389111B897F00E27156 /* MainWindow_iPhone.xib */; };
-		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
-		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
-		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
-		790D40EA12F9C7F000A161D3 /* BfoxRef.mm in Sources */ = {isa = PBXBuildFile; fileRef = 790D40E912F9C7F000A161D3 /* BfoxRef.mm */; };
-		790D40FB12F9CB1800A161D3 /* BfoxVerseList.mm in Sources */ = {isa = PBXBuildFile; fileRef = 790D40FA12F9CB1800A161D3 /* BfoxVerseList.mm */; };
-		790D42CC12FA2AEA00A161D3 /* bfox_range_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 790D42C812FA2AEA00A161D3 /* bfox_range_list.cpp */; };
-		790D42CD12FA2AEA00A161D3 /* bfox_verse_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 790D42CA12FA2AEA00A161D3 /* bfox_verse_list.cpp */; };
-		790D42D512FA2B0F00A161D3 /* bible-meta.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42CF12FA2B0F00A161D3 /* bible-meta.php */; };
-		790D42D612FA2B0F00A161D3 /* biblefox-ref.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D012FA2B0F00A161D3 /* biblefox-ref.php */; };
-		790D42D712FA2B0F00A161D3 /* db-table.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D112FA2B0F00A161D3 /* db-table.php */; };
-		790D42D812FA2B0F00A161D3 /* parser.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D212FA2B0F00A161D3 /* parser.php */; };
-		790D42D912FA2B0F00A161D3 /* sequences.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D312FA2B0F00A161D3 /* sequences.php */; };
-		790D42DA12FA2B0F00A161D3 /* verse.php in Resources */ = {isa = PBXBuildFile; fileRef = 790D42D412FA2B0F00A161D3 /* verse.php */; };
-		790D42E712FA311700A161D3 /* BfoxRefParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 790D42E612FA311700A161D3 /* BfoxRefParser.mm */; };
-		790D42ED12FA34DC00A161D3 /* BfoxRefParseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 790D42EC12FA34DC00A161D3 /* BfoxRefParseResult.m */; };
-		790D42F212FAF47D00A161D3 /* NSString+BfoxRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 790D42F112FAF47D00A161D3 /* NSString+BfoxRef.m */; };
-		790D42F512FB3DE100A161D3 /* BfoxBookRegexes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 790D42F412FB3DE100A161D3 /* BfoxBookRegexes.strings */; };
-		793F818312FB474E0010B466 /* BfoxBookSynonymLookup.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793F818212FB474E0010B466 /* BfoxBookSynonymLookup.strings */; };
-		793F81A612FB5AF40010B466 /* BfoxBookNamesDefault.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793F81A512FB5AF40010B466 /* BfoxBookNamesDefault.strings */; };
-		793F81AA12FB5B9F0010B466 /* BfoxBookNamesShort.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793F81A912FB5B9F0010B466 /* BfoxBookNamesShort.strings */; };
+		794799831303615F0010388F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799821303615F0010388F /* UIKit.framework */; };
+		794799851303615F0010388F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799841303615F0010388F /* Foundation.framework */; };
+		794799871303615F0010388F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799861303615F0010388F /* CoreGraphics.framework */; };
+		794799891303615F0010388F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799881303615F0010388F /* CoreData.framework */; };
+		794799AD130361600010388F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799821303615F0010388F /* UIKit.framework */; };
+		794799AE130361600010388F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799841303615F0010388F /* Foundation.framework */; };
+		794799AF130361600010388F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799861303615F0010388F /* CoreGraphics.framework */; };
+		794799B0130361600010388F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794799881303615F0010388F /* CoreData.framework */; };
+		794799B8130361600010388F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 794799B6130361600010388F /* InfoPlist.strings */; };
+		794799BB130361600010388F /* BfoxRefTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 794799BA130361600010388F /* BfoxRefTests.h */; };
+		794799BD130361600010388F /* BfoxRefTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 794799BC130361600010388F /* BfoxRefTests.m */; };
+		794799E4130361EB0010388F /* BfoxRef.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 794799D2130361EB0010388F /* BfoxRef.xcdatamodeld */; };
+		794799E5130361EB0010388F /* BfoxRefAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 794799D5130361EB0010388F /* BfoxRefAppDelegate.m */; };
+		794799E6130361EB0010388F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 794799D6130361EB0010388F /* InfoPlist.strings */; };
+		794799E7130361EB0010388F /* BfoxRefAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 794799DA130361EB0010388F /* BfoxRefAppDelegate_iPad.m */; };
+		794799E8130361EB0010388F /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794799DB130361EB0010388F /* MainWindow_iPad.xib */; };
+		794799E9130361EB0010388F /* BfoxRefAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 794799DF130361EB0010388F /* BfoxRefAppDelegate_iPhone.m */; };
+		794799EA130361EB0010388F /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794799E0130361EB0010388F /* MainWindow_iPhone.xib */; };
+		794799EB130361EB0010388F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 794799E2130361EB0010388F /* main.m */; };
+		79479A22130362DA0010388F /* BfoxRef.mm in Sources */ = {isa = PBXBuildFile; fileRef = 794799FE130362DA0010388F /* BfoxRef.mm */; };
+		79479A23130362DA0010388F /* BfoxRefParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79479A00130362DA0010388F /* BfoxRefParser.mm */; };
+		79479A24130362DA0010388F /* BfoxRefParseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 79479A02130362DA0010388F /* BfoxRefParseResult.m */; };
+		79479A25130362DA0010388F /* BfoxVerseList.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79479A04130362DA0010388F /* BfoxVerseList.mm */; };
+		79479A26130362DA0010388F /* bfox_range_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79479A08130362DA0010388F /* bfox_range_list.cpp */; };
+		79479A27130362DA0010388F /* bfox_verse_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79479A0A130362DA0010388F /* bfox_verse_list.cpp */; };
+		79479A28130362DA0010388F /* BfoxBookNamesDefault.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A0C130362DA0010388F /* BfoxBookNamesDefault.strings */; };
+		79479A29130362DA0010388F /* BfoxBookNamesShort.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A0E130362DA0010388F /* BfoxBookNamesShort.strings */; };
+		79479A2A130362DA0010388F /* BfoxBookRegexes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A10130362DA0010388F /* BfoxBookRegexes.strings */; };
+		79479A2B130362DA0010388F /* BfoxBookSynonymLookup.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A12130362DA0010388F /* BfoxBookSynonymLookup.strings */; };
+		79479A2C130362DA0010388F /* NSString+BfoxRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 79479A15130362DA0010388F /* NSString+BfoxRef.m */; };
+		79479A2D130362DA0010388F /* bible-meta.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A17130362DA0010388F /* bible-meta.php */; };
+		79479A2E130362DA0010388F /* biblefox-ref.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A18130362DA0010388F /* biblefox-ref.php */; };
+		79479A2F130362DA0010388F /* db-table.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A19130362DA0010388F /* db-table.php */; };
+		79479A30130362DA0010388F /* parser.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A1A130362DA0010388F /* parser.php */; };
+		79479A31130362DA0010388F /* sequences.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A1B130362DA0010388F /* sequences.php */; };
+		79479A32130362DA0010388F /* create-book-meta.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A1D130362DA0010388F /* create-book-meta.php */; };
+		79479A33130362DA0010388F /* create-book-regexes.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A1E130362DA0010388F /* create-book-regexes.php */; };
+		79479A34130362DA0010388F /* create-synonym-lookup.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A1F130362DA0010388F /* create-synonym-lookup.php */; };
+		79479A35130362DA0010388F /* meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 79479A20130362DA0010388F /* meta.txt */; };
+		79479A36130362DA0010388F /* verse.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A21130362DA0010388F /* verse.php */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		794799B1130361600010388F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 794799751303615F0010388F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7947997D1303615F0010388F;
+			remoteInfo = BfoxRef;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* AppDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate_iPad.h; path = iPad/AppDelegate_iPad.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* AppDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_iPad.m; path = iPad/AppDelegate_iPad.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* BfoxRef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BfoxRef.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2860E387111B897F00E27156 /* AppDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_iPhone.h; sourceTree = "<group>"; };
-		2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate_iPhone.m; sourceTree = "<group>"; };
-		2860E389111B897F00E27156 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		2870939E111907710040F596 /* BfoxRef.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = BfoxRef.xcdatamodel; sourceTree = "<group>"; };
-		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow_iPad.xib; path = iPad/MainWindow_iPad.xib; sourceTree = "<group>"; };
-		28EEBFDC1118E19E00187D67 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		28EEC0491118E28000187D67 /* AppDelegate_Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate_Shared.h; path = Shared/AppDelegate_Shared.h; sourceTree = "<group>"; };
-		28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_Shared.m; path = Shared/AppDelegate_Shared.m; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* BfoxRef_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRef_Prefix.pch; sourceTree = "<group>"; };
-		790D40E812F9C7F000A161D3 /* BfoxRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRef.h; sourceTree = "<group>"; };
-		790D40E912F9C7F000A161D3 /* BfoxRef.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BfoxRef.mm; sourceTree = "<group>"; };
-		790D40F912F9CB1800A161D3 /* BfoxVerseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxVerseList.h; sourceTree = "<group>"; };
-		790D40FA12F9CB1800A161D3 /* BfoxVerseList.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BfoxVerseList.mm; sourceTree = "<group>"; };
-		790D42C712FA2AEA00A161D3 /* bfox_book_meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_book_meta.h; sourceTree = "<group>"; };
-		790D42C812FA2AEA00A161D3 /* bfox_range_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bfox_range_list.cpp; sourceTree = "<group>"; };
-		790D42C912FA2AEA00A161D3 /* bfox_range_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_range_list.h; sourceTree = "<group>"; };
-		790D42CA12FA2AEA00A161D3 /* bfox_verse_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bfox_verse_list.cpp; sourceTree = "<group>"; };
-		790D42CB12FA2AEA00A161D3 /* bfox_verse_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_verse_list.h; sourceTree = "<group>"; };
-		790D42CF12FA2B0F00A161D3 /* bible-meta.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "bible-meta.php"; sourceTree = "<group>"; };
-		790D42D012FA2B0F00A161D3 /* biblefox-ref.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "biblefox-ref.php"; sourceTree = "<group>"; };
-		790D42D112FA2B0F00A161D3 /* db-table.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "db-table.php"; sourceTree = "<group>"; };
-		790D42D212FA2B0F00A161D3 /* parser.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = parser.php; sourceTree = "<group>"; };
-		790D42D312FA2B0F00A161D3 /* sequences.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = sequences.php; sourceTree = "<group>"; };
-		790D42D412FA2B0F00A161D3 /* verse.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = verse.php; sourceTree = "<group>"; };
-		790D42E512FA311700A161D3 /* BfoxRefParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefParser.h; sourceTree = "<group>"; };
-		790D42E612FA311700A161D3 /* BfoxRefParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BfoxRefParser.mm; sourceTree = "<group>"; };
-		790D42EB12FA34DC00A161D3 /* BfoxRefParseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefParseResult.h; sourceTree = "<group>"; };
-		790D42EC12FA34DC00A161D3 /* BfoxRefParseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BfoxRefParseResult.m; sourceTree = "<group>"; };
-		790D42F012FAF47D00A161D3 /* NSString+BfoxRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BfoxRef.h"; sourceTree = "<group>"; };
-		790D42F112FAF47D00A161D3 /* NSString+BfoxRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BfoxRef.m"; sourceTree = "<group>"; };
-		790D42F412FB3DE100A161D3 /* BfoxBookRegexes.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookRegexes.strings; sourceTree = "<group>"; };
-		793F818212FB474E0010B466 /* BfoxBookSynonymLookup.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookSynonymLookup.strings; sourceTree = "<group>"; };
-		793F81A212FB584A0010B466 /* bfox_bible_meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_bible_meta.h; sourceTree = "<group>"; };
-		793F81A512FB5AF40010B466 /* BfoxBookNamesDefault.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookNamesDefault.strings; sourceTree = "<group>"; };
-		793F81A912FB5B9F0010B466 /* BfoxBookNamesShort.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BfoxBookNamesShort.strings; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* BfoxRef-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BfoxRef-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		7947997E1303615F0010388F /* BfoxRef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BfoxRef.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		794799821303615F0010388F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		794799841303615F0010388F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		794799861303615F0010388F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		794799881303615F0010388F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		794799AC130361600010388F /* BfoxRefTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BfoxRefTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		794799B5130361600010388F /* BfoxRefTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BfoxRefTests-Info.plist"; sourceTree = "<group>"; };
+		794799B7130361600010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		794799B9130361600010388F /* BfoxRefTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BfoxRefTests-Prefix.pch"; sourceTree = "<group>"; };
+		794799BA130361600010388F /* BfoxRefTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BfoxRefTests.h; sourceTree = "<group>"; };
+		794799BC130361600010388F /* BfoxRefTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BfoxRefTests.m; sourceTree = "<group>"; };
+		794799D0130361EB0010388F /* BfoxRef-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BfoxRef-Info.plist"; sourceTree = "<group>"; };
+		794799D1130361EB0010388F /* BfoxRef-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BfoxRef-Prefix.pch"; sourceTree = "<group>"; };
+		794799D3130361EB0010388F /* BfoxRef.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BfoxRef.xcdatamodel; sourceTree = "<group>"; };
+		794799D4130361EB0010388F /* BfoxRefAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefAppDelegate.h; sourceTree = "<group>"; };
+		794799D5130361EB0010388F /* BfoxRefAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BfoxRefAppDelegate.m; sourceTree = "<group>"; };
+		794799D7130361EB0010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		794799D9130361EB0010388F /* BfoxRefAppDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefAppDelegate_iPad.h; sourceTree = "<group>"; };
+		794799DA130361EB0010388F /* BfoxRefAppDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BfoxRefAppDelegate_iPad.m; sourceTree = "<group>"; };
+		794799DC130361EB0010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		794799DE130361EB0010388F /* BfoxRefAppDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		794799DF130361EB0010388F /* BfoxRefAppDelegate_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BfoxRefAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		794799E1130361EB0010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		794799E2130361EB0010388F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		794799FD130362DA0010388F /* BfoxRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRef.h; sourceTree = "<group>"; };
+		794799FE130362DA0010388F /* BfoxRef.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BfoxRef.mm; sourceTree = "<group>"; };
+		794799FF130362DA0010388F /* BfoxRefParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefParser.h; sourceTree = "<group>"; };
+		79479A00130362DA0010388F /* BfoxRefParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BfoxRefParser.mm; sourceTree = "<group>"; };
+		79479A01130362DA0010388F /* BfoxRefParseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxRefParseResult.h; sourceTree = "<group>"; };
+		79479A02130362DA0010388F /* BfoxRefParseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BfoxRefParseResult.m; sourceTree = "<group>"; };
+		79479A03130362DA0010388F /* BfoxVerseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfoxVerseList.h; sourceTree = "<group>"; };
+		79479A04130362DA0010388F /* BfoxVerseList.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BfoxVerseList.mm; sourceTree = "<group>"; };
+		79479A06130362DA0010388F /* bfox_bible_meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_bible_meta.h; sourceTree = "<group>"; };
+		79479A07130362DA0010388F /* bfox_book_meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_book_meta.h; sourceTree = "<group>"; };
+		79479A08130362DA0010388F /* bfox_range_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bfox_range_list.cpp; sourceTree = "<group>"; };
+		79479A09130362DA0010388F /* bfox_range_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_range_list.h; sourceTree = "<group>"; };
+		79479A0A130362DA0010388F /* bfox_verse_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bfox_verse_list.cpp; sourceTree = "<group>"; };
+		79479A0B130362DA0010388F /* bfox_verse_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfox_verse_list.h; sourceTree = "<group>"; };
+		79479A0D130362DA0010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BfoxBookNamesDefault.strings; sourceTree = "<group>"; };
+		79479A0F130362DA0010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BfoxBookNamesShort.strings; sourceTree = "<group>"; };
+		79479A11130362DA0010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BfoxBookRegexes.strings; sourceTree = "<group>"; };
+		79479A13130362DA0010388F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BfoxBookSynonymLookup.strings; sourceTree = "<group>"; };
+		79479A14130362DA0010388F /* NSString+BfoxRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BfoxRef.h"; sourceTree = "<group>"; };
+		79479A15130362DA0010388F /* NSString+BfoxRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BfoxRef.m"; sourceTree = "<group>"; };
+		79479A17130362DA0010388F /* bible-meta.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "bible-meta.php"; sourceTree = "<group>"; };
+		79479A18130362DA0010388F /* biblefox-ref.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "biblefox-ref.php"; sourceTree = "<group>"; };
+		79479A19130362DA0010388F /* db-table.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "db-table.php"; sourceTree = "<group>"; };
+		79479A1A130362DA0010388F /* parser.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = parser.php; sourceTree = "<group>"; };
+		79479A1B130362DA0010388F /* sequences.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = sequences.php; sourceTree = "<group>"; };
+		79479A1D130362DA0010388F /* create-book-meta.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "create-book-meta.php"; sourceTree = "<group>"; };
+		79479A1E130362DA0010388F /* create-book-regexes.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "create-book-regexes.php"; sourceTree = "<group>"; };
+		79479A1F130362DA0010388F /* create-synonym-lookup.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "create-synonym-lookup.php"; sourceTree = "<group>"; };
+		79479A20130362DA0010388F /* meta.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = meta.txt; sourceTree = "<group>"; };
+		79479A21130362DA0010388F /* verse.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = verse.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+		7947997B1303615F0010388F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */,
+				794799831303615F0010388F /* UIKit.framework in Frameworks */,
+				794799851303615F0010388F /* Foundation.framework in Frameworks */,
+				794799871303615F0010388F /* CoreGraphics.framework in Frameworks */,
+				794799891303615F0010388F /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		794799A8130361600010388F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794799AD130361600010388F /* UIKit.framework in Frameworks */,
+				794799AE130361600010388F /* Foundation.framework in Frameworks */,
+				794799AF130361600010388F /* CoreGraphics.framework in Frameworks */,
+				794799B0130361600010388F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19C28FACFE9D520D11CA2CBB /* Products */ = {
+		794799731303615F0010388F = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* BfoxRef.app */,
+				794799FC130362DA0010388F /* BfoxRef */,
+				794799CF130361EB0010388F /* Project */,
+				794799B3130361600010388F /* BfoxRefTests */,
+				794799811303615F0010388F /* Frameworks */,
+				7947997F1303615F0010388F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7947997F1303615F0010388F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7947997E1303615F0010388F /* BfoxRef.app */,
+				794799AC130361600010388F /* BfoxRefTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2860E386111B897F00E27156 /* iPhone */ = {
+		794799811303615F0010388F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2860E387111B897F00E27156 /* AppDelegate_iPhone.h */,
-				2860E388111B897F00E27156 /* AppDelegate_iPhone.m */,
-				2860E389111B897F00E27156 /* MainWindow_iPhone.xib */,
-			);
-			path = iPhone;
-			sourceTree = "<group>";
-		};
-		28EEBF621118D79A00187D67 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				2819307C112F81BE00ECF9B4 /* BfoxRef.xcdatamodeld */,
-				28EEC0491118E28000187D67 /* AppDelegate_Shared.h */,
-				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
-				8D1107310486CEB800E47090 /* BfoxRef-Info.plist */,
-			);
-			name = Shared;
-			sourceTree = "<group>";
-		};
-		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
-			isa = PBXGroup;
-			children = (
-				79921B1512F61D830001B702 /* BfoxRef */,
-				2860E386111B897F00E27156 /* iPhone */,
-				29B97317FDCFA39411CA2CEA /* iPad */,
-				28EEBF621118D79A00187D67 /* Shared */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				19C28FACFE9D520D11CA2CBB /* Products */,
-			);
-			name = CustomTemplate;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32CA4F630368D1EE00C91783 /* BfoxRef_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-				1D3623240D0F684500981E51 /* AppDelegate_iPad.h */,
-				1D3623250D0F684500981E51 /* AppDelegate_iPad.m */,
-				28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */,
-			);
-			name = iPad;
-			sourceTree = "<group>";
-		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
-				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
-				28EEBFDC1118E19E00187D67 /* CoreData.framework */,
+				794799821303615F0010388F /* UIKit.framework */,
+				794799841303615F0010388F /* Foundation.framework */,
+				794799861303615F0010388F /* CoreGraphics.framework */,
+				794799881303615F0010388F /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		790D42BE12FA2AC400A161D3 /* cpp */ = {
+		794799B3130361600010388F /* BfoxRefTests */ = {
 			isa = PBXGroup;
 			children = (
-				793F81A212FB584A0010B466 /* bfox_bible_meta.h */,
-				790D42C712FA2AEA00A161D3 /* bfox_book_meta.h */,
-				790D42C912FA2AEA00A161D3 /* bfox_range_list.h */,
-				790D42C812FA2AEA00A161D3 /* bfox_range_list.cpp */,
-				790D42CB12FA2AEA00A161D3 /* bfox_verse_list.h */,
-				790D42CA12FA2AEA00A161D3 /* bfox_verse_list.cpp */,
+				794799BA130361600010388F /* BfoxRefTests.h */,
+				794799BC130361600010388F /* BfoxRefTests.m */,
+				794799B4130361600010388F /* Supporting Files */,
+			);
+			path = BfoxRefTests;
+			sourceTree = "<group>";
+		};
+		794799B4130361600010388F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				794799B5130361600010388F /* BfoxRefTests-Info.plist */,
+				794799B6130361600010388F /* InfoPlist.strings */,
+				794799B9130361600010388F /* BfoxRefTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		794799CF130361EB0010388F /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				794799D0130361EB0010388F /* BfoxRef-Info.plist */,
+				794799D1130361EB0010388F /* BfoxRef-Prefix.pch */,
+				794799D2130361EB0010388F /* BfoxRef.xcdatamodeld */,
+				794799D4130361EB0010388F /* BfoxRefAppDelegate.h */,
+				794799D5130361EB0010388F /* BfoxRefAppDelegate.m */,
+				794799D6130361EB0010388F /* InfoPlist.strings */,
+				794799D8130361EB0010388F /* iPad */,
+				794799DD130361EB0010388F /* iPhone */,
+				794799E2130361EB0010388F /* main.m */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		794799D8130361EB0010388F /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				794799D9130361EB0010388F /* BfoxRefAppDelegate_iPad.h */,
+				794799DA130361EB0010388F /* BfoxRefAppDelegate_iPad.m */,
+				794799DB130361EB0010388F /* MainWindow_iPad.xib */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		794799DD130361EB0010388F /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				794799DE130361EB0010388F /* BfoxRefAppDelegate_iPhone.h */,
+				794799DF130361EB0010388F /* BfoxRefAppDelegate_iPhone.m */,
+				794799E0130361EB0010388F /* MainWindow_iPhone.xib */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		794799FC130362DA0010388F /* BfoxRef */ = {
+			isa = PBXGroup;
+			children = (
+				79479A05130362DA0010388F /* cpp */,
+				79479A16130362DA0010388F /* php */,
+				794799FD130362DA0010388F /* BfoxRef.h */,
+				794799FE130362DA0010388F /* BfoxRef.mm */,
+				79479A14130362DA0010388F /* NSString+BfoxRef.h */,
+				79479A15130362DA0010388F /* NSString+BfoxRef.m */,
+				794799FF130362DA0010388F /* BfoxRefParser.h */,
+				79479A00130362DA0010388F /* BfoxRefParser.mm */,
+				79479A01130362DA0010388F /* BfoxRefParseResult.h */,
+				79479A02130362DA0010388F /* BfoxRefParseResult.m */,
+				79479A03130362DA0010388F /* BfoxVerseList.h */,
+				79479A04130362DA0010388F /* BfoxVerseList.mm */,
+				79479A0C130362DA0010388F /* BfoxBookNamesDefault.strings */,
+				79479A0E130362DA0010388F /* BfoxBookNamesShort.strings */,
+				79479A10130362DA0010388F /* BfoxBookRegexes.strings */,
+				79479A12130362DA0010388F /* BfoxBookSynonymLookup.strings */,
+			);
+			path = BfoxRef;
+			sourceTree = "<group>";
+		};
+		79479A05130362DA0010388F /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				79479A06130362DA0010388F /* bfox_bible_meta.h */,
+				79479A07130362DA0010388F /* bfox_book_meta.h */,
+				79479A08130362DA0010388F /* bfox_range_list.cpp */,
+				79479A09130362DA0010388F /* bfox_range_list.h */,
+				79479A0A130362DA0010388F /* bfox_verse_list.cpp */,
+				79479A0B130362DA0010388F /* bfox_verse_list.h */,
 			);
 			path = cpp;
 			sourceTree = "<group>";
 		};
-		790D42CE12FA2B0F00A161D3 /* php */ = {
+		79479A16130362DA0010388F /* php */ = {
 			isa = PBXGroup;
 			children = (
-				790D42CF12FA2B0F00A161D3 /* bible-meta.php */,
-				790D42D012FA2B0F00A161D3 /* biblefox-ref.php */,
-				790D42D112FA2B0F00A161D3 /* db-table.php */,
-				790D42D212FA2B0F00A161D3 /* parser.php */,
-				790D42D312FA2B0F00A161D3 /* sequences.php */,
-				790D42D412FA2B0F00A161D3 /* verse.php */,
+				79479A17130362DA0010388F /* bible-meta.php */,
+				79479A18130362DA0010388F /* biblefox-ref.php */,
+				79479A19130362DA0010388F /* db-table.php */,
+				79479A1A130362DA0010388F /* parser.php */,
+				79479A1B130362DA0010388F /* sequences.php */,
+				79479A1C130362DA0010388F /* tools */,
+				79479A21130362DA0010388F /* verse.php */,
 			);
 			path = php;
 			sourceTree = "<group>";
 		};
-		79921B1512F61D830001B702 /* BfoxRef */ = {
+		79479A1C130362DA0010388F /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				790D42BE12FA2AC400A161D3 /* cpp */,
-				790D42CE12FA2B0F00A161D3 /* php */,
-				790D40E812F9C7F000A161D3 /* BfoxRef.h */,
-				790D40E912F9C7F000A161D3 /* BfoxRef.mm */,
-				790D40F912F9CB1800A161D3 /* BfoxVerseList.h */,
-				790D40FA12F9CB1800A161D3 /* BfoxVerseList.mm */,
-				790D42E512FA311700A161D3 /* BfoxRefParser.h */,
-				790D42E612FA311700A161D3 /* BfoxRefParser.mm */,
-				790D42EB12FA34DC00A161D3 /* BfoxRefParseResult.h */,
-				790D42EC12FA34DC00A161D3 /* BfoxRefParseResult.m */,
-				790D42F012FAF47D00A161D3 /* NSString+BfoxRef.h */,
-				790D42F112FAF47D00A161D3 /* NSString+BfoxRef.m */,
-				790D42F412FB3DE100A161D3 /* BfoxBookRegexes.strings */,
-				793F818212FB474E0010B466 /* BfoxBookSynonymLookup.strings */,
-				793F81A512FB5AF40010B466 /* BfoxBookNamesDefault.strings */,
-				793F81A912FB5B9F0010B466 /* BfoxBookNamesShort.strings */,
+				79479A1D130362DA0010388F /* create-book-meta.php */,
+				79479A1E130362DA0010388F /* create-book-regexes.php */,
+				79479A1F130362DA0010388F /* create-synonym-lookup.php */,
+				79479A20130362DA0010388F /* meta.txt */,
 			);
-			path = BfoxRef;
+			path = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* BfoxRef */ = {
+		7947997D1303615F0010388F /* BfoxRef */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "BfoxRef" */;
+			buildConfigurationList = 794799C0130361600010388F /* Build configuration list for PBXNativeTarget "BfoxRef" */;
 			buildPhases = (
-				1D60588D0D05DD3D006BFB54 /* Resources */,
-				1D60588E0D05DD3D006BFB54 /* Sources */,
-				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				7947997A1303615F0010388F /* Sources */,
+				7947997B1303615F0010388F /* Frameworks */,
+				7947997C1303615F0010388F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -237,154 +307,342 @@
 			);
 			name = BfoxRef;
 			productName = BfoxRef;
-			productReference = 1D6058910D05DD3D006BFB54 /* BfoxRef.app */;
+			productReference = 7947997E1303615F0010388F /* BfoxRef.app */;
 			productType = "com.apple.product-type.application";
+		};
+		794799AB130361600010388F /* BfoxRefTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 794799C3130361600010388F /* Build configuration list for PBXNativeTarget "BfoxRefTests" */;
+			buildPhases = (
+				794799A7130361600010388F /* Sources */,
+				794799A8130361600010388F /* Frameworks */,
+				794799A9130361600010388F /* Resources */,
+				794799AA130361600010388F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				794799B2130361600010388F /* PBXTargetDependency */,
+			);
+			name = BfoxRefTests;
+			productName = BfoxRefTests;
+			productReference = 794799AC130361600010388F /* BfoxRefTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		29B97313FDCFA39411CA2CEA /* Project object */ = {
+		794799751303615F0010388F /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-				ORGANIZATIONNAME = Epicfox;
-			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BfoxRef" */;
-			compatibilityVersion = "Xcode 3.1";
+			buildConfigurationList = 794799781303615F0010388F /* Build configuration list for PBXProject "BfoxRef" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			mainGroup = 794799731303615F0010388F;
+			productRefGroup = 7947997F1303615F0010388F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* BfoxRef */,
+				7947997D1303615F0010388F /* BfoxRef */,
+				794799AB130361600010388F /* BfoxRefTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+		7947997C1303615F0010388F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */,
-				2860E38B111B897F00E27156 /* MainWindow_iPhone.xib in Resources */,
-				790D42D512FA2B0F00A161D3 /* bible-meta.php in Resources */,
-				790D42D612FA2B0F00A161D3 /* biblefox-ref.php in Resources */,
-				790D42D712FA2B0F00A161D3 /* db-table.php in Resources */,
-				790D42D812FA2B0F00A161D3 /* parser.php in Resources */,
-				790D42D912FA2B0F00A161D3 /* sequences.php in Resources */,
-				790D42DA12FA2B0F00A161D3 /* verse.php in Resources */,
-				790D42F512FB3DE100A161D3 /* BfoxBookRegexes.strings in Resources */,
-				793F818312FB474E0010B466 /* BfoxBookSynonymLookup.strings in Resources */,
-				793F81A612FB5AF40010B466 /* BfoxBookNamesDefault.strings in Resources */,
-				793F81AA12FB5B9F0010B466 /* BfoxBookNamesShort.strings in Resources */,
+				794799E6130361EB0010388F /* InfoPlist.strings in Resources */,
+				794799E8130361EB0010388F /* MainWindow_iPad.xib in Resources */,
+				794799EA130361EB0010388F /* MainWindow_iPhone.xib in Resources */,
+				79479A28130362DA0010388F /* BfoxBookNamesDefault.strings in Resources */,
+				79479A29130362DA0010388F /* BfoxBookNamesShort.strings in Resources */,
+				79479A2A130362DA0010388F /* BfoxBookRegexes.strings in Resources */,
+				79479A2B130362DA0010388F /* BfoxBookSynonymLookup.strings in Resources */,
+				79479A2D130362DA0010388F /* bible-meta.php in Resources */,
+				79479A2E130362DA0010388F /* biblefox-ref.php in Resources */,
+				79479A2F130362DA0010388F /* db-table.php in Resources */,
+				79479A30130362DA0010388F /* parser.php in Resources */,
+				79479A31130362DA0010388F /* sequences.php in Resources */,
+				79479A32130362DA0010388F /* create-book-meta.php in Resources */,
+				79479A33130362DA0010388F /* create-book-regexes.php in Resources */,
+				79479A34130362DA0010388F /* create-synonym-lookup.php in Resources */,
+				79479A35130362DA0010388F /* meta.txt in Resources */,
+				79479A36130362DA0010388F /* verse.php in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		794799A9130361600010388F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794799B8130361600010388F /* InfoPlist.strings in Resources */,
+				794799BB130361600010388F /* BfoxRefTests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		794799AA130361600010388F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+		7947997A1303615F0010388F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* AppDelegate_iPad.m in Sources */,
-				28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */,
-				2819307D112F81BE00ECF9B4 /* BfoxRef.xcdatamodeld in Sources */,
-				2860E38A111B897F00E27156 /* AppDelegate_iPhone.m in Sources */,
-				790D40EA12F9C7F000A161D3 /* BfoxRef.mm in Sources */,
-				790D40FB12F9CB1800A161D3 /* BfoxVerseList.mm in Sources */,
-				790D42CC12FA2AEA00A161D3 /* bfox_range_list.cpp in Sources */,
-				790D42CD12FA2AEA00A161D3 /* bfox_verse_list.cpp in Sources */,
-				790D42E712FA311700A161D3 /* BfoxRefParser.mm in Sources */,
-				790D42ED12FA34DC00A161D3 /* BfoxRefParseResult.m in Sources */,
-				790D42F212FAF47D00A161D3 /* NSString+BfoxRef.m in Sources */,
+				794799E4130361EB0010388F /* BfoxRef.xcdatamodeld in Sources */,
+				794799E5130361EB0010388F /* BfoxRefAppDelegate.m in Sources */,
+				794799E7130361EB0010388F /* BfoxRefAppDelegate_iPad.m in Sources */,
+				794799E9130361EB0010388F /* BfoxRefAppDelegate_iPhone.m in Sources */,
+				794799EB130361EB0010388F /* main.m in Sources */,
+				79479A22130362DA0010388F /* BfoxRef.mm in Sources */,
+				79479A23130362DA0010388F /* BfoxRefParser.mm in Sources */,
+				79479A24130362DA0010388F /* BfoxRefParseResult.m in Sources */,
+				79479A25130362DA0010388F /* BfoxVerseList.mm in Sources */,
+				79479A26130362DA0010388F /* bfox_range_list.cpp in Sources */,
+				79479A27130362DA0010388F /* bfox_verse_list.cpp in Sources */,
+				79479A2C130362DA0010388F /* NSString+BfoxRef.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		794799A7130361600010388F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794799BD130361600010388F /* BfoxRefTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		794799B2130361600010388F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7947997D1303615F0010388F /* BfoxRef */;
+			targetProxy = 794799B1130361600010388F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		794799B6130361600010388F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				794799B7130361600010388F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		794799D6130361EB0010388F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				794799D7130361EB0010388F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		794799DB130361EB0010388F /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				794799DC130361EB0010388F /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+		794799E0130361EB0010388F /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				794799E1130361EB0010388F /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		79479A0C130362DA0010388F /* BfoxBookNamesDefault.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79479A0D130362DA0010388F /* en */,
+			);
+			name = BfoxBookNamesDefault.strings;
+			sourceTree = "<group>";
+		};
+		79479A0E130362DA0010388F /* BfoxBookNamesShort.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79479A0F130362DA0010388F /* en */,
+			);
+			name = BfoxBookNamesShort.strings;
+			sourceTree = "<group>";
+		};
+		79479A10130362DA0010388F /* BfoxBookRegexes.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79479A11130362DA0010388F /* en */,
+			);
+			name = BfoxBookRegexes.strings;
+			sourceTree = "<group>";
+		};
+		79479A12130362DA0010388F /* BfoxBookSynonymLookup.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79479A13130362DA0010388F /* en */,
+			);
+			name = BfoxBookSynonymLookup.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		1D6058940D05DD3E006BFB54 /* Debug */ = {
+		794799BE130361600010388F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		794799BF130361600010388F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		794799C1130361600010388F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = BfoxRef_Prefix.pch;
-				INFOPLIST_FILE = "BfoxRef-Info.plist";
-				PRODUCT_NAME = BfoxRef;
+				GCC_PREFIX_HEADER = "Project/BfoxRef-Prefix.pch";
+				INFOPLIST_FILE = "Project/BfoxRef-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		1D6058950D05DD3E006BFB54 /* Release */ = {
+		794799C2130361600010388F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = BfoxRef_Prefix.pch;
-				INFOPLIST_FILE = "BfoxRef-Info.plist";
-				PRODUCT_NAME = BfoxRef;
+				GCC_PREFIX_HEADER = "Project/BfoxRef-Prefix.pch";
+				INFOPLIST_FILE = "Project/BfoxRef-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		C01FCF4F08A954540054247B /* Debug */ = {
+		794799C4130361600010388F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BfoxRef.app/BfoxRef";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BfoxRefTests/BfoxRefTests-Prefix.pch";
+				INFOPLIST_FILE = "BfoxRefTests/BfoxRefTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		C01FCF5008A954540054247B /* Release */ = {
+		794799C5130361600010388F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BfoxRef.app/BfoxRef";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BfoxRefTests/BfoxRefTests-Prefix.pch";
+				INFOPLIST_FILE = "BfoxRefTests/BfoxRefTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "BfoxRef" */ = {
+		794799781303615F0010388F /* Build configuration list for PBXProject "BfoxRef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D6058940D05DD3E006BFB54 /* Debug */,
-				1D6058950D05DD3E006BFB54 /* Release */,
+				794799BE130361600010388F /* Debug */,
+				794799BF130361600010388F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BfoxRef" */ = {
+		794799C0130361600010388F /* Build configuration list for PBXNativeTarget "BfoxRef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4F08A954540054247B /* Debug */,
-				C01FCF5008A954540054247B /* Release */,
+				794799C1130361600010388F /* Debug */,
+				794799C2130361600010388F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		794799C3130361600010388F /* Build configuration list for PBXNativeTarget "BfoxRefTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				794799C4130361600010388F /* Debug */,
+				794799C5130361600010388F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -392,18 +650,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2819307C112F81BE00ECF9B4 /* BfoxRef.xcdatamodeld */ = {
+		794799D2130361EB0010388F /* BfoxRef.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2870939E111907710040F596 /* BfoxRef.xcdatamodel */,
+				794799D3130361EB0010388F /* BfoxRef.xcdatamodel */,
 			);
-			currentVersion = 2870939E111907710040F596 /* BfoxRef.xcdatamodel */;
-			name = BfoxRef.xcdatamodeld;
-			path = Shared/BfoxRef.xcdatamodeld;
+			currentVersion = 794799D3130361EB0010388F /* BfoxRef.xcdatamodel */;
+			path = BfoxRef.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+	rootObject = 794799751303615F0010388F /* Project object */;
 }
