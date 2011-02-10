@@ -47,6 +47,17 @@
 		79479A34130362DA0010388F /* create-synonym-lookup.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A1F130362DA0010388F /* create-synonym-lookup.php */; };
 		79479A35130362DA0010388F /* meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 79479A20130362DA0010388F /* meta.txt */; };
 		79479A36130362DA0010388F /* verse.php in Resources */ = {isa = PBXBuildFile; fileRef = 79479A21130362DA0010388F /* verse.php */; };
+		79479A40130428130010388F /* BfoxRef.mm in Sources */ = {isa = PBXBuildFile; fileRef = 794799FE130362DA0010388F /* BfoxRef.mm */; };
+		79479A42130428480010388F /* bfox_range_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79479A08130362DA0010388F /* bfox_range_list.cpp */; };
+		79479A43130428480010388F /* bfox_verse_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79479A0A130362DA0010388F /* bfox_verse_list.cpp */; };
+		79479A44130428480010388F /* NSString+BfoxRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 79479A15130362DA0010388F /* NSString+BfoxRef.m */; };
+		79479A45130428480010388F /* BfoxRefParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79479A00130362DA0010388F /* BfoxRefParser.mm */; };
+		79479A46130428480010388F /* BfoxRefParseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 79479A02130362DA0010388F /* BfoxRefParseResult.m */; };
+		79479A47130428480010388F /* BfoxVerseList.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79479A04130362DA0010388F /* BfoxVerseList.mm */; };
+		79479A48130428570010388F /* BfoxBookNamesDefault.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A0C130362DA0010388F /* BfoxBookNamesDefault.strings */; };
+		79479A49130428570010388F /* BfoxBookNamesShort.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A0E130362DA0010388F /* BfoxBookNamesShort.strings */; };
+		79479A4A130428570010388F /* BfoxBookRegexes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A10130362DA0010388F /* BfoxBookRegexes.strings */; };
+		79479A4B130428570010388F /* BfoxBookSynonymLookup.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79479A12130362DA0010388F /* BfoxBookSynonymLookup.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -381,6 +392,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79479A48130428570010388F /* BfoxBookNamesDefault.strings in Resources */,
+				79479A49130428570010388F /* BfoxBookNamesShort.strings in Resources */,
+				79479A4A130428570010388F /* BfoxBookRegexes.strings in Resources */,
+				79479A4B130428570010388F /* BfoxBookSynonymLookup.strings in Resources */,
 				794799B8130361600010388F /* InfoPlist.strings in Resources */,
 				794799BB130361600010388F /* BfoxRefTests.h in Resources */,
 			);
@@ -428,7 +443,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79479A42130428480010388F /* bfox_range_list.cpp in Sources */,
+				79479A43130428480010388F /* bfox_verse_list.cpp in Sources */,
+				79479A44130428480010388F /* NSString+BfoxRef.m in Sources */,
+				79479A45130428480010388F /* BfoxRefParser.mm in Sources */,
+				79479A46130428480010388F /* BfoxRefParseResult.m in Sources */,
+				79479A47130428480010388F /* BfoxVerseList.mm in Sources */,
 				794799BD130361600010388F /* BfoxRefTests.m in Sources */,
+				79479A40130428130010388F /* BfoxRef.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
