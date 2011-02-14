@@ -9,6 +9,7 @@
 #import "BfoxRef.h"
 #import "BfoxVerseList.h"
 #import "BfoxRefParser.h"
+#import "bfox_book_meta.h"
 
 @implementation BfoxRef
 
@@ -101,7 +102,7 @@
 	NSUInteger index = 0;
 	for (BfoxRef *ref in refsByBooks) {
 		if (index) [refString appendString:@"; "];
-		NSString *bookName = [BfoxVerseList nameOfBook:[ref.verseList firstBook] forBookNameKeyBase:bookNameKeyBase inTable:bookNameTable];
+		NSString *bookName = [BfoxVerseList nameOfBook:[ref firstBook] forBookNameKeyBase:bookNameKeyBase inTable:bookNameTable];
 		NSString *numberString = [ref.verseList numberStringForFirstBook];
 		
 		if (numberString && [numberString length]) [refString appendFormat:@"%@ %@", bookName, numberString];
@@ -140,6 +141,68 @@
 	}
 	
 	return [NSArray arrayWithArray:array];
+}
+
+- (BfoxBook)firstBook {
+	BfoxBook book = BfoxBookForVerseIndex([verseList firstVerseIndex]);
+	
+	if (BfoxFirstBookForFullBible == book) {
+		book = BfoxFirstBookInBible;
+	}
+	
+	return book;
+}
+
+- (BfoxChapter)firstChapter {
+	BfoxChapter chapter = BfoxChapterForVerseIndex([verseList firstVerseIndex]);
+
+	if (BfoxFirstChapterForFullBook == chapter) {
+		chapter = BfoxFirstChapterInBook;
+	}
+	
+	return chapter;
+}
+
+- (BfoxVerse)firstVerse {
+	BfoxVerse verse = BfoxVerseForVerseIndex([verseList firstVerseIndex]);
+	
+	if (BfoxFirstVerseForFullChapter == verse) {
+		verse = BfoxFirstVerseInChapter;
+	}
+	
+	return verse;
+}
+
+- (BfoxBook)lastBook {
+	BfoxBook book = BfoxBookForVerseIndex([verseList lastVerseIndex]);
+	
+	if (BfoxLastBookForFullBible == book) {
+		book = BfoxLastBookInBible;
+	}
+	
+	return book;
+}
+
+- (BfoxChapter)lastChapter {
+	BfoxVerseIndex verseIndex = [verseList lastVerseIndex];
+	BfoxChapter chapter = BfoxChapterForVerseIndex(verseIndex);
+	
+	if (BfoxLastChapterForFullBook == chapter) {
+		chapter = BfoxLastChapterInBook(BfoxBookForVerseIndex(verseIndex));
+	}
+	
+	return chapter;
+}
+
+- (BfoxVerse)lastVerse {
+	BfoxVerseIndex verseIndex = [verseList lastVerseIndex];
+	BfoxVerse verse = BfoxVerseForVerseIndex(verseIndex);
+	
+	if (BfoxLastVerseForFullChapter == verse) {
+		verse = BfoxLastVerseInChapter(BfoxBookForVerseIndex(verseIndex), BfoxChapterForVerseIndex(verseIndex));
+	}
+	
+	return verse;
 }
 
 @end

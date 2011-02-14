@@ -114,9 +114,14 @@
 	return bookName;
 }
 
-- (BfoxBook)firstBook {
+- (BfoxVerseIndex)firstVerseIndex {
 	Bfox::Range front_range = verse_list->ranges.front();
-	return BfoxBookForVerseIndex(front_range.first);
+	return (BfoxVerseIndex)front_range.first;
+}
+
+- (BfoxVerseIndex)lastVerseIndex {
+	Bfox::Range front_range = verse_list->ranges.front();
+	return (BfoxVerseIndex)front_range.last;
 }
 
 - (NSString *)numberStringForFirstBook {

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "bfox_bible_meta.h"
 
 @class BfoxVerseList;
 
@@ -42,5 +43,13 @@ typedef enum {
 - (NSMutableArray *)arrayOfRefsByBooks;
 - (NSMutableArray *)arrayOfRefsByChapter;
 - (NSMutableArray *)arrayOfRefsWithChapterSize:(NSUInteger)chapterSize;
+
+- (BfoxBook)firstBook;
+- (BfoxChapter)firstChapter;
+- (BfoxVerse)firstVerse;
+
+- (BfoxBook)lastBook;
+- (BfoxChapter)lastChapter;
+- (BfoxVerse)lastVerse;
 
 @end

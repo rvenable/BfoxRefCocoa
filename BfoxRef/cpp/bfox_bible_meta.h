@@ -11,9 +11,9 @@
 #define BFOX_BIBLE_META_H_
 
 typedef unsigned int BfoxVerseIndex;
-const BfoxVerseIndex BfoxVerseIndexNotSet = 0;
+extern const BfoxVerseIndex BfoxVerseIndexNotSet;
 typedef unsigned char BfoxBCV;
-const BfoxBCV BfoxBCVInvalid = 0xFF;
+extern const BfoxBCV BfoxBCVInvalid;
 
 typedef enum {
 	BfoxBookNotSet = 0,

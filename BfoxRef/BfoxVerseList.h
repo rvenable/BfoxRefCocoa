@@ -26,7 +26,8 @@
 - (Boolean)hasVerses;
 - (NSMutableArray *)arrayOfRefsCutAtRangeBorder:(BfoxVerseIndex)rangeBorder withOffset:(NSUInteger)offset;
 + (NSString *)nameOfBook:(BfoxBook)book forBookNameKeyBase:(NSString *)bookNameKeyBase inTable:(NSString *)bookNameTable;
-- (BfoxBook)firstBook;
+- (BfoxVerseIndex)firstVerseIndex;
+- (BfoxVerseIndex)lastVerseIndex;
 - (NSString *)numberStringForFirstBook;
 
 @end
