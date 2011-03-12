@@ -29,5 +29,6 @@
 - (BfoxVerseIndex)firstVerseIndex;
 - (BfoxVerseIndex)lastVerseIndex;
 - (NSString *)numberStringForFirstBook;
+- (NSPredicate *)predicateForIntersectionWithFirstVerseField:(NSString *)firstVerseField andLastVerseField:(NSString *)lastVerseField;
 
 @end

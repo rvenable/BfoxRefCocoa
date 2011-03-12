@@ -131,4 +131,21 @@
 	return numString;
 }
 
+- (NSPredicate *)predicateForIntersectionWithFirstVerseField:(NSString *)firstVerseField andLastVerseField:(NSString *)lastVerseField
+{
+	NSMutableArray *predicates = [NSMutableArray arrayWithCapacity:verse_list->ranges.size()];
+	for (std::list<Bfox::Range>::iterator it = verse_list->ranges.begin(); it != verse_list->ranges.end(); it++) {
+		Bfox::Range range = *it;
+		
+		[predicates addObject:[NSPredicate predicateWithFormat:
+							   @"(%K BETWEEN {%d, %d}) OR (%K BETWEEN {%d, %d}) OR (%d BETWEEN {%K, %K}) OR (%d BETWEEN {%K, %K})",
+							   firstVerseField, range.first, range.last,
+							   lastVerseField, range.first, range.last,
+							   range.first, firstVerseField, lastVerseField,
+							   range.last, firstVerseField, lastVerseField]];
+	}
+	
+	return [NSCompoundPredicate orPredicateWithSubpredicates:predicates];
+}
+
 @end

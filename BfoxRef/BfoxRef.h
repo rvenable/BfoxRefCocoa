@@ -52,4 +52,7 @@ typedef enum {
 - (BfoxChapter)lastChapter;
 - (BfoxVerse)lastVerse;
 
+- (NSPredicate *)predicateForIntersection;
+- (NSPredicate *)predicateForIntersectionWithFirstVerseField:(NSString *)firstVerseField andLastVerseField:(NSString *)lastVerseField;
+
 @end

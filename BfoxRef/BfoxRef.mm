@@ -205,4 +205,14 @@
 	return verse;
 }
 
+- (NSPredicate *)predicateForIntersection
+{
+	return [self predicateForIntersectionWithFirstVerseField:@"firstVerseIndex" andLastVerseField:@"lastVerseIndex"];
+}
+
+- (NSPredicate *)predicateForIntersectionWithFirstVerseField:(NSString *)firstVerseField andLastVerseField:(NSString *)lastVerseField
+{
+	return [verseList predicateForIntersectionWithFirstVerseField:firstVerseField andLastVerseField:lastVerseField];
+}
+
 @end
